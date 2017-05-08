@@ -1,0 +1,104 @@
+---
+layout: default
+title: Actualités
+pill: 0
+---
+
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="twelve wide column"  id="main">
+        <div class="ui text container">
+
+          {% for post in paginator.posts %}
+          <div class="post">
+            <h3 class="ui header">
+              {% if post.header_link %}
+              <a href="{{ post.header_link }}"  target="_blank">
+                {{ post.header }}
+              </a>
+              {% else %}
+              {{ post.header }}
+              {% endif %}
+              <div class="sub header">Posté le {{ post.date | date: "%d %B %Y" }}</div>
+              {% for tag in post.tags %}
+              {% case tag %}
+              {% when "News" %}
+              <a class="ui tag label">Actualités</a>
+              {% when "Video" %}
+              <a class="ui blue tag label uh">Vidéos</a>
+              {% when "EASP 2016" %}
+              <a class="ui yellow tag label">EASP 2016</a>
+              {% when "Event" %}
+              <a class="ui orange tag label">Evènement</a>
+              {% when "French" %}
+              <a class="ui tag label"><i class="france flag"></i>Français</a>
+              {% when "Spanish" %}
+              <a class="ui tag label"><i class="spain flag"></i>Espagnol</a>
+              {% when "English" %}
+              <a class="ui tag label"><i class="gb flag"></i>Anglais</a>
+              {% when "US" %}
+              <a class="ui tag label"><i class="america flag"></i>Américain</a>
+              {% else %}
+              {% endcase %}
+              {% endfor %}
+            </h3>
+            {% if post.image %}
+            {% if post.image_link %}
+            <a href="{{ post.image_link }}" class="ui fluid image" target="_blank">
+              <img src="{{ post.image }}">
+            </a>
+            {% else %}
+            <img class="ui fluid image" src="{{ post.image }}">
+            {% endif %}
+            <br>
+            {% endif %}
+            {{ post.content }}
+            {% if post.video %}
+            <div class="ui embed" data-source="youtube" data-id="{{ post.video }}" data-placeholder="http://img.youtube.com/vi/{{ post.video }}/default.jpg"></div>
+            {% else %}
+
+            {% endif %}
+
+          </div>
+          <div class="ui divider"></div>
+
+          {% endfor %}
+        </div>
+
+        {% if paginator.total_pages > 1 %}
+        <div class="row pages">
+          <div class="centered column container">
+            <div class="ui pagination menu">
+              {% if paginator.previous_page and paginator.previous_page > 1 %}
+              <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+              {% else %}
+              {% endif %}
+
+              {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+              <a class="active item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+              {% elsif page == 1 %}
+              <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+              {% else %}
+              <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+              {% endif %}
+              {% endfor %}
+
+              {% if paginator.next_page and paginator.next_page < paginator.total_pages %}
+              <a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+              {% else %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+    </div>
+
+      {% include rail.html %}
+      <!-- Pagination links -->
+    </div>
+
+
+  </div>
+</div>

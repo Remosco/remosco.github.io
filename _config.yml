@@ -1,0 +1,15 @@
+title : Remosco - Réseau mondial Serge Moscovici
+tagline: "Réseau mondial Serge Moscovici"
+author :
+  name : Antoine Cordelois
+  email : cordelois.antoine+remosco@gmail.com
+  github : eu
+collections:
+lang: fr
+sass:
+  sass_dir: assets/_sass
+  style: compressed
+paginate: 6
+paginate_path: "/:num/"
+gems: [jekyll-paginate]
+production_url : http://remosco.com

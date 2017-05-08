@@ -1,0 +1,10 @@
+---
+header: Le site du Remosco fait peau neuve!
+tags:
+  - News
+  - Video
+  - EASP 2016
+---
+Afin de valoriser le [meeting EASP 2016](http://github.com), le REMOSCO a décidé de revoir l'intégralité de son site web. Désormais, en plus d'un accès simple aux [ressources](http://github.com), vous pourrez suivre les actualités du réseau et les évènements qu'il soutient.
+
+Le meeting EASP 2016 a lui aussi sa [section dédiée](http://github.com). Vous pourrez y trouver les [actes](http://github.com), [fiches des participants](http://github.com) (bientôt disponibles) ainsi que les [publications associées](http://github.com).

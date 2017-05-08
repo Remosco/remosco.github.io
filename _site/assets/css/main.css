@@ -1,0 +1,164 @@
+
+{
+  pointer-events: none;
+}
+#nprogress .bar {
+  background-color:  #1678c2;
+  position: fixed;
+  z-index: 10;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+#nprogress .bar .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #1678c2, 0 0 5px  #1678c2;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+
+.hidden.menu {
+  display: none;
+}
+
+.masthead.segment {
+  min-height: 700px;
+  padding-bottom: 1em;
+  padding-top: 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+.masthead  #logo {
+  margin-bottom: 0em;
+  padding:0.5em;
+  padding-bottom: 0em;
+}
+.masthead .logo-container {
+  background-color: rgba(0,0,0,.85);
+  margin-top: 20em;
+  font-size: 4em;
+  font-weight: normal;
+  padding: 1em;
+
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
+  padding-bottom:1em;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .post:not(:first-child) h3{
+  padding-top: 0.5em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+.ui.sticky.fixed {
+  margin-top: 6em!important;
+}
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+.menu-container {
+  background-color: rgba(0,0,0,.85);
+}
+.secondary.pointing.menu .simple.dropdown > .menu {
+  margin-top:0!important;
+}
+.subtitle {
+  visibility: hidden;
+}
+.masthead.segment, [data-slides] {
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background 100% 100%;
+  -webkit-transition: all 0.7s ease!important;
+  -moz-transition: all 0.7s ease!important;
+  -ms-transition: all 0.7s ease!important;
+  -o-transition: all 0.7s ease!important;
+  transition: all 0.7s ease!important;
+  height:100%;
+}
+.menu:not(.secondary) .dropdown.item.current{
+  background: rgba(255,255,255,.15);
+  color: #fff !important;
+}
+.menu:not(.secondary) .dropdown.item.current:after{
+visibility: visible!important;
+z-index: 100!important;
+background: #3d3e3f !important;
+margin: 0 !important;
+box-shadow: none !important;
+border: none !important;
+}
+.menu.inverted .dropdown.item.current{
+border-color: #fff;
+}
+.pages {
+  text-align: center;
+}
+/* additional CSS for hidden image preload section */
+[hidden] { display: none; }
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead .logo img{
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    font-size: 1.5em;
+  }
+
+}

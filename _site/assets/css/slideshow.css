@@ -1,0 +1,19 @@
+.masthead, [data-slides] {
+	background-image: url(images/splash1.png); /* Default image. */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background 100% 100%;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-ms-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	height:100%;
+}
+
+/* Use additional CSS to control the `height` of `[data-slides]`, like so: */
+
+
+
+/* additional CSS for hidden image preload section */
+[hidden] { display: none; }

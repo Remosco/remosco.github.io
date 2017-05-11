@@ -14,5 +14,9 @@ sass:
   style: compressed
 paginate: 6
 paginate_path: "/:num/"
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 production_url : http://remosco.com

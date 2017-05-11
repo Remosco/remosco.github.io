@@ -3,6 +3,24 @@ layout: default
 title: Notre réseau
 pill: 2
 ---
-<h1>
-This is network page
-</h1>
+
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="twelve wide column"  id="main">
+        <div class="ui text container">
+          <h1 class="ui header">Notre réseau</h1>
+          <div class="ui divider"></div>
+          <h2 class="ui header">Président d'honneur</h2>
+          <h2 class="ui header">Comité de Direction</h2>
+          <h2 class="ui header">Membres d’honneur</h2>
+          <h2 class="ui header">Conseil Scientifique International</h2>
+          <h3 class="ui header">Membres de droit (Professeurs fondateurs des Centres créés avec l’aide du Fonds Balzan)</h3>
+          <h3 class="ui header">Membres invités</h3>
+        </div>
+      </div>
+      {% include rail.html %}
+      <!-- Pagination links -->
+    </div>
+  </div>
+</div>

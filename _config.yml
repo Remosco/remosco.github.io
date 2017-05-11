@@ -5,7 +5,10 @@ author :
   email : cordelois.antoine+remosco@gmail.com
   github : eu
 collections:
+  - members
+  - EASP
 lang: fr
+plugins: [ConcatArrays]
 sass:
   sass_dir: assets/_sass
   style: compressed

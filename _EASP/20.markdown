@@ -1,0 +1,9 @@
+---
+header: "Diffusion, propagation, propagande : et après ? L’effusion, un nouveau mode de communication médiatique pour l’étude des représentations sociales"
+people:
+  - name: Fabrice Buschini
+    title: Sorbonne Nouvelle - Paris 3 University
+video: LFQ8IQlG0BM
+date: 2016-11-18T12:20:00Z
+section: 2
+---

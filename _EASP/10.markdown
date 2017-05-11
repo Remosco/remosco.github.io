@@ -1,0 +1,9 @@
+---
+header: Connecting social representation research with minority influence
+people:
+  - name: Kamilla Khamzina, Elodie Roebroeck and Serge Guimond
+    title: Laboratoire de Psychologie Sociale et Cognitive, Blaise Pascal University, Clermont-Ferrand
+video: ras2X5gwf2A
+date: 2016-11-17T14:55:00Z
+section: 1
+---

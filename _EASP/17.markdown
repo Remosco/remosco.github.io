@@ -1,0 +1,9 @@
+---
+header: "The formation processes re-visited – the importance of naturalized representations "
+people:
+  - name: Inari Sakki, Rusten Menard and EEmeli Hakoköngäs Sakki
+    title: University of Helsinki
+video: 4d9QHfDAnEA
+date: 2016-11-18T10:25:00Z
+section: 2
+---

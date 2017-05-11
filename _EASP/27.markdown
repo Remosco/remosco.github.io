@@ -1,0 +1,9 @@
+---
+header: "Future issues. Applications of Social representations to education and health "
+people:
+  - name: Denise Jodelet
+    title: EHESS
+video: SAT3Els5kz4
+date: 2016-11-18T16:50:00Z
+section: 3
+---

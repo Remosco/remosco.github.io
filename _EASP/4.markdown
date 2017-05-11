@@ -1,0 +1,9 @@
+---
+header: Minority Influence and Fashion. The Model of Style Transformation
+people:
+  - name: Carlo Michael Sommer
+    title: Darmstadt University of Applied Sciences
+video: P_e8xmyoCkk
+date: 2016-11-17T10:25:00Z
+section: 1
+---

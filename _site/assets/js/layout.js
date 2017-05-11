@@ -25,5 +25,17 @@ $(document)
     context: '#main'
   })
   ;
+  setTimeout(2000,
+    function () {
+      console.log("refresh");
+      $('.ui.sticky')
+      .sticky('refresh')
+      ;
+    } // recalculates offsets
+
+  )
+  $('.menu .ui.dropdown')
+  .dropdown()
+  ;
 })
 ;

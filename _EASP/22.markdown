@@ -1,0 +1,9 @@
+---
+header: "Experimental social psychology is not a science of discovery, but an art of theatrical reflection"
+people:
+  - name: John Rijsman
+    title: University of Tilburg
+video: jiqBoH-8Ykg
+date: 2016-11-18T14:35:00Z
+section: 3
+---

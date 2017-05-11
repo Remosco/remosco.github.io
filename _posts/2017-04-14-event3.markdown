@@ -1,6 +1,7 @@
 ---
 header: Colloque transdisciplinaire, Les menaces
 image: https://remosco.hypotheses.org/files/2016/09/menaces-210x300.jpg
+image_size: medium # e.g. small, medium, big or fluid (100%). Default is fluid
 tags:
   - News
   - Event

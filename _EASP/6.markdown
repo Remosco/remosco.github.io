@@ -1,0 +1,9 @@
+---
+header: The impact of majority and minority social support for pro-environmental values on pro-environmental behaviours
+people:
+  - name: Fanny Lalot, Juan Manuel Falomir-Pichastor and Alain Quiamzade
+    title: University of Geneva
+video: e8cAQ1_MpFQ
+date: 2016-11-17T12:00:00Z
+section: 1
+---

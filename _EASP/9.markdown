@@ -1,0 +1,14 @@
+---
+header: "Validation of Everyday Knowledge: The role of Consensus and Perceived Heterogeneity"
+people:
+  - name: Diniz Lopes
+    title: ISCTE-IUL, CIS-IUL, Lisbon
+  - name: Jorge Vala
+    title: Instituto de Ciências Sociais, University of Lisbon
+  - name:  Ewa Drozda-Senkowska
+    title: Paris-Descartes University
+  - name:  Dominique Oberlé
+    title: Paris-Ouest-Nanterre-la-Défense University
+video: VRzJa_3BDAs
+date: 2016-11-17T14:35:00Z
+---

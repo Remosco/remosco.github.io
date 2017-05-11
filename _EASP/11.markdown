@@ -1,0 +1,11 @@
+---
+header: "Is There a Social Psychology of Historic Grievances and Intergroup Conflict in the Age of ‘Radicalisation’?"
+people:
+  - name: Andreea Ernst-Vintila
+    title: Paris-Ouest-Nanterre-la-Défense University
+  - name: Yechiel Klar
+    title: Tel Aviv University
+video: 9vlVtClNJ-U
+date: 2016-11-17T16:10:00Z
+section: 1
+---

@@ -1,0 +1,11 @@
+---
+header: "Understanding Complexity in Social Engagement with Multiculturalism: why a Multimethod Approach is needed to unravel the Contention with ‘Differences’"
+people:
+  - name: Babette Gekeler
+    title: Institute for Medical Psychology, Charité University Hospitals, Berlin
+  - name:  Kathrin Friederici
+    title: Humboldt University, Berlin
+video: CBWCcs_ENUg
+date: 2016-11-17T16:50:00Z
+section: 1
+---

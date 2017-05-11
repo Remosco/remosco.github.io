@@ -91,8 +91,7 @@
         setTimeout(function() {
           css(progress, {
             transition: 'all ' + speed + 'ms linear',
-            //!\ set to 0 to make it disappear when fully loaded
-            opacity: 1
+            opacity: 0
           });
           setTimeout(function() {
             NProgress.remove();
@@ -120,7 +119,7 @@
    */
   NProgress.start = function() {
     if (!NProgress.status) NProgress.set(0);
-
+console.log("started");
     var work = function() {
       setTimeout(function() {
         if (!NProgress.status) return;
@@ -147,6 +146,7 @@
    */
 
   NProgress.done = function(force) {
+    console.log("done");
     if (!force && !NProgress.status) return this;
 
     return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
@@ -262,7 +262,7 @@
     removeClass(document.documentElement, 'nprogress-busy');
     removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
     var progress = document.getElementById('nprogress');
-    //progress && removeElement(progress);
+    progress && removeElement(progress);
   };
 
   /**
@@ -474,7 +474,7 @@
    */
 
   function removeElement(element) {
-//    element && element.parentNode && element.parentNode.removeChild(element);
+    element && element.parentNode && element.parentNode.removeChild(element);
   }
 
   return NProgress;

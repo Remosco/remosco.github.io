@@ -1,0 +1,9 @@
+---
+header: "Society and Theory in Social Psychology: a reconsideration"
+people:
+  - name: Juliet Foster
+    title: University of Cambridge
+video: MPvFyStwtA0
+date: 2016-11-18T12:00:00Z
+section: 2
+---

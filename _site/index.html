@@ -9,77 +9,82 @@
   <!-- Site Properties -->
   <title>REMOSCO - Actualités</title>
 
-  <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-  <link rel="stylesheet" type="text/css"  href="/assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css"  href="./assets/css/main.css" />
 
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 
-  <script src="/semantic/dist/semantic.min.js"></script>
+  <script src="./semantic/dist/semantic.min.js"></script>
 </head>
 <body>
   <!-- Following Menu -->
   
-  <div class="ui huge inverted top pointing fixed hidden menu">
+  <div class="ui huge inverted top fixed hidden menu">
     
       <div class="ui container">
-        <a  class="item active"  href="/">Actualités</a>
+        <a  class="item active"  href="./">Actualités</a>
         <div class="ui simple dropdown item">
           Notre projet <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="/activities.html">Activités</a>
-            <a class="item" href="/events.html">Actions soutenues</a>
-            <a class="item" href="/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+            <a class="item" href="./activities.html">Activités</a>
+            <a class="item" href="./events.html">Actions soutenues</a>
+            <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
           </div>
         </div>
-        <a class="item" href="/network.html">Notre réseau</a>
+        <a class="item" href="./network.html">Notre réseau</a>
         <div class="ui simple dropdown item">
           Serge Moscovici <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="/background.html">Son parcours</a>
-            <a class="item" href="/tributes.html">Hommages à Serge Moscovici</a>
-            <a class="item" href="/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+            <a class="item" href="./background.html">Son parcours</a>
+            <a class="item" href="./videos.html">Ses vidéos</a>
+            <a class="item" href="./bibliography.html">Sa bibliographie</a>
+            <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
+            <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
           </div>
         </div>
-        <div class="ui simple dropdown item">
-          Ressources <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="/videos.html">Vidéos</a>
-            <a class="item" href="/community.html">Communauté</a>
-            <a class="item" href="/bibliography.html">Bibliographie</a>
+        <div class="right item">
+          <div class="ui simple dropdown inverted button">
+            EASP 2016<i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
+              <a class="item" href="./EASP-members.html">Participants</a>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
 
     <!-- Sidebar Menu -->
     <div class="ui vertical inverted sidebar menu">
-      <a  class="item active"  href="/">Actualités</a>
-        <div class="ui simple dropdown item">
+      <a  class="item active"  href="./">Actualités</a>
+      <div class="ui simple dropdown item">
         Notre projet <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="/activities.html">Activités</a>
-          <a class="item" href="/events.html">Actions soutenues</a>
-          <a class="item" href="/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+          <a class="item" href="./activities.html">Activités</a>
+          <a class="item" href="./events.html">Actions soutenues</a>
+          <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
         </div>
       </div>
-      <a class="item" href="/network.html">Notre réseau</a>
-        <div class="ui simple dropdown item">
+      <a class="item" href="./network.html">Notre réseau</a>
+      <div class="ui simple dropdown item">
         Serge Moscovici <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="/background.html">Son parcours</a>
-          <a class="item" href="/tributes.html">Hommages à Serge Moscovici</a>
-          <a class="item" href="/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+          <a class="item" href="./background.html">Son parcours</a>
+          <a class="item" href="./videos.html">Ses vidéos</a>
+          <a class="item" href="./bibliography.html">Sa bibliographie</a>
+          <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
+          <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
         </div>
       </div>
-        <div class="ui simple dropdown item">
-        Ressources <i class="dropdown icon"></i>
+      <div class="ui simple dropdown item">
+        EASP 2016 <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="/videos.html">Vidéos</a>
-          <a class="item" href="/community.html">Communauté</a>
-          <a class="item" href="/bibliography.html">Bibliographie</a>
+          <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
+          <a class="item" href="./EASP-members.html">Participants</a>
         </div>
       </div>
     </div>
@@ -88,56 +93,59 @@
     <!-- Page Contents -->
     <div class="pusher">
       
-      <div class="ui inverted vertical masthead center aligned segment hidden" data-slides='["/assets/images/splash.png","/assets/images/splash1.jpeg","/assets/images/splash2.jpg"]'>
+      <div class="ui inverted vertical masthead center aligned segment hidden" data-slides='["./assets/images/splash.png","./assets/images/splash1.jpeg","./assets/images/splash2.jpg"]'>
         <!-- image preload -->
         <div hidden>
-          <img class="ui image fluid" src="/assets/images/splash.png">
-          <img class="ui image fluid" src="/assets/images/splash1.jpeg">
-          <img class="ui image fluid" src="/assets/images/splash2.jpg">
+          <img class="ui image fluid" src="./assets/images/splash.png">
+          <img class="ui image fluid" src="./assets/images/splash1.jpeg">
+          <img class="ui image fluid" src="./assets/images/splash2.jpg">
         </div> <!-- /.image preload -->
-          <div class="row menu-container">
-            <div class="ui container">
-              <div class="ui huge secondary inverted pointing menu">
-                <a class="toc item">
-                  <i class="sidebar icon"></i>
-                </a>
-                <a  class="item active"  href="/">Actualités</a>
-                <div class="ui simple dropdown item">
-                  Notre projet <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <a class="item" href="/activities.html">Activités</a>
-                    <a class="item" href="/events.html">Actions soutenues</a>
-                    <a class="item" href="/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
-                  </div>
+        <div class="row menu-container">
+          <div class="ui container">
+            <div class="ui huge secondary inverted pointing menu">
+              <a class="toc item">
+                <i class="sidebar icon"></i>
+              </a>
+              <a  class="item active"  href="./">Actualités</a>
+              <div class="ui simple dropdown item">
+                Notre projet <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item" href="./activities.html">Activités</a>
+                  <a class="item" href="./events.html">Actions soutenues</a>
+                  <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
                 </div>
-                <a class="item" href="/network.html">Notre réseau</a>
-                  <div class="ui simple dropdown item">
-                  Serge Moscovici <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <a class="item" href="/background.html">Son parcours</a>
-                    <a class="item" href="/tributes.html">Hommages à Serge Moscovici</a>
-                    <a class="item" href="/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
-                  </div>
+              </div>
+              <a class="item" href="./network.html">Notre réseau</a>
+              <div class="ui simple dropdown item">
+                Serge Moscovici <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item" href="./background.html">Son parcours</a>
+                  <a class="item" href="./videos.html">Ses vidéos</a>
+                  <a class="item" href="./bibliography.html">Sa bibliographie</a>
+                  <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
+                  <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
                 </div>
-                  <div class="ui simple dropdown item">
-                  Ressources <i class="dropdown icon"></i>
+              </div>
+              <div class="right item">
+                <div class="ui simple dropdown inverted button">
+                  EASP 2016<i class="dropdown icon"></i>
                   <div class="menu">
-                    <a class="item" href="/videos.html">Vidéos</a>
-                    <a class="item" href="/community.html">Communauté</a>
-                    <a class="item" href="/bibliography.html">Bibliographie</a>
+                    <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
+                    <a class="item" href="./EASP-members.html">Participants</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="ui text container logo-container transition hidden">
-            <object class="hidden" id="logo" type="image/svg+xml" data="/assets/images/logo.svg" style="visibility:hidden;"></object>
-            <h2 class="hidden subtitle">Réseau Mondial Serge Moscovici</h2>
-          </div>
         </div>
-        
-        <div class="content">
-          <div class="ui vertical stripe segment">
+        <div class="ui text container logo-container transition hidden large screen only">
+          <object class="hidden" id="logo" type="image/svg+xml" data="./assets/images/logo.svg" style="visibility:hidden;"></object>
+          <h2 class="hidden subtitle">Réseau Mondial Serge Moscovici</h2>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">
     <div class="row">
       <div class="twelve wide column"  id="main">
@@ -145,11 +153,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Le site du Remosco fait peau neuve!
               
-              <div class="sub header">Posté le 30 April 2017</div>
+              <div class="sub header">Posté le
+                          
+                          30
+                          avril
+                          
+                          2017
+                        </div>
               
               
               <a class="ui tag label">Actualités</a>
@@ -163,7 +177,7 @@
               <a class="ui yellow tag label">EASP 2016</a>
               
               
-            </h3>
+            </h2>
             
             <p>Afin de valoriser le <a href="http://github.com">meeting EASP 2016</a>, le REMOSCO a décidé de revoir l’intégralité de son site web. Désormais, en plus d’un accès simple aux <a href="http://github.com">ressources</a>, vous pourrez suivre les actualités du réseau et les évènements qu’il soutient.</p>
 
@@ -178,11 +192,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Nature et société
               
-              <div class="sub header">Posté le 18 April 2017</div>
+              <div class="sub header">Posté le
+                          
+                          18
+                          avril
+                          
+                          2017
+                        </div>
               
               
               <a class="ui blue tag label uh">Vidéos</a>
@@ -196,7 +216,7 @@
               <a class="ui tag label"><i class="france flag"></i>Français</a>
               
               
-            </h3>
+            </h2>
             
             <p>Film autour et avec Serge Moscovici réalisé par Tânia Maciel et Maria Inácia D’Ávila.</p>
 
@@ -213,11 +233,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Letter to Sherif -  Serge Moscovici
               
-              <div class="sub header">Posté le 16 April 2017</div>
+              <div class="sub header">Posté le
+                          
+                          16
+                          avril
+                          
+                          2017
+                        </div>
               
               
               <a class="ui blue tag label uh">Vidéos</a>
@@ -227,7 +253,7 @@
               <a class="ui tag label"><i class="gb flag"></i>Anglais</a>
               
               
-            </h3>
+            </h2>
             
             <p>Entretien avec Serge Moscovici en juin 2007 à Paris. En prenant appui sur <a href="#">une lettre de Donald Granberg</a>, il répond à Muzafer Sherif (1906-1988). D’une durée d’une heure, cette réponse est en anglais.</p>
 
@@ -244,11 +270,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Serge Moscovici, un dialogue avec Pascal Dibie (inédit)
               
-              <div class="sub header">Posté le 15 April 2017</div>
+              <div class="sub header">Posté le
+                          
+                          15
+                          avril
+                          
+                          2017
+                        </div>
               
               
               <a class="ui blue tag label uh">Vidéos</a>
@@ -258,7 +290,7 @@
               <a class="ui tag label"><i class="france flag"></i>Français</a>
               
               
-            </h3>
+            </h2>
             
             <p>Vidéo inédite de 2004 diffusée lors de la conférence internationale en hommage à Serge Moscovici à Paris (16-17 mars 2017).</p>
 
@@ -271,11 +303,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Colloque transdisciplinaire, Les menaces
               
-              <div class="sub header">Posté le 14 April 2017</div>
+              <div class="sub header">Posté le
+                          
+                          14
+                          avril
+                          
+                          2017
+                        </div>
               
               
               <a class="ui tag label">Actualités</a>
@@ -285,10 +323,12 @@
               <a class="ui orange tag label">Evènement</a>
               
               
-            </h3>
+            </h2>
             
             
-            <img class="ui fluid image" src="https://remosco.hypotheses.org/files/2016/09/menaces-210x300.jpg">
+            
+            <img class="ui medium image" src="https://remosco.hypotheses.org/files/2016/09/menaces-210x300.jpg">
+            
             
             <br>
             
@@ -303,11 +343,17 @@
 
           
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               
               Soumission à l'autorité
               
-              <div class="sub header">Posté le 28 March 2017</div>
+              <div class="sub header">Posté le
+                          
+                          28
+                          mars
+                          
+                          2017
+                        </div>
               
               
               <a class="ui blue tag label uh">Vidéos</a>
@@ -317,7 +363,7 @@
               <a class="ui tag label"><i class="france flag"></i>Français</a>
               
               
-            </h3>
+            </h2>
             
             <p>Après la diffusion d’un extrait du film d’Henri Verneuil « I comme Icare », débat en plateau autour du phénomène de soumission à l’autorité en écho à l’expérience de Milgram et analyse du processus de soumission avec Serge Moscovici et le psychanalyste Léon Chertok.</p>
 
@@ -362,12 +408,12 @@
         
     </div>
 
-      <div class="ui right internal attached rail">
+      <div class="ui right internal attached rail large screen only">
   <div class="ui segment">
     <div class="ui sticky">
       <a class="ui fluid " href="http://www.fmsh.fr">
         <div class="ui fluid image">
-          <img src="/assets/images/fmsh.png">
+          <img src="./assets/images/fmsh.png">
         </div>
         <div class="content">
           <a class="header">Remosco</a>
@@ -398,50 +444,50 @@
   </div>
 </div>
 
-        </div>
+      </div>
 
-        <div class="ui inverted vertical footer segment">
-          <div class="ui container">
-            <div class="ui stackable inverted divided equal height stackable grid">
-              <div class="three wide column">
-                <h4 class="ui inverted header">A propos</h4>
-                <div class="ui inverted link list">
-                  <a href="#" class="item">Carte du site</a>
-                  <a href="#" class="item">Crédits</a>
-                  <a href="#" class="item">Nous contacter</a>
-                </div>
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">A propos</h4>
+              <div class="ui inverted link list">
+                <a href="#" class="item">Carte du site</a>
+                <a href="#" class="item">Crédits</a>
+                <a href="#" class="item">Nous contacter</a>
               </div>
-              <div class="three wide column">
-                <h4 class="ui inverted header">Favoris</h4>
-                <div class="ui inverted link list">
-                  <a href="http://www.cicts.uevora.pt/RIPRES" target="_blank" class="item">RIPRES</a>
-                  <a href="http://www.renirs-cemers-mexico.org/" target="_blank" class="item">RENIRS – Mexico</a>
-                  <a href="http://www.sr-indonesia.org/en/" target="_blank" class="item">CSR – Indonesia</a>
-                  <a href="http://www.lse.ac.uk/socialPsychology/Home.aspx" target="_blank" class="item">Psychology@LSE</a>
-                  <a href="http://www.geirso.uqam.ca/" target="_blank" class="item">GEIRSO Montréal</a>
-                  <a href="http://www.centromoscovici.unb.br/" target="_blank" class="item">Centro Moscovici – Brasília</a>
-                  <a href="http://www.fcc.org.br/pesquisa/ciers.html" target="_blank" class="item">CIERS-Ed Sao Paulo</a>
-                  <a href="http://greps.univ-lyon2.fr/" target="_blank" class="item">Labo GRePS – Univ. Lyon 2</a>
-                  <a href="http://www.lps-aix.com/" target="_blank" class="item">Labo LPS-AMU</a>
-                </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Favoris</h4>
+              <div class="ui inverted link list">
+                <a href="http://www.cicts.uevora.pt/RIPRES" target="_blank" class="item">RIPRES</a>
+                <a href="http://www.renirs-cemers-mexico.org/" target="_blank" class="item">RENIRS – Mexico</a>
+                <a href="http://www.sr-indonesia.org/en/" target="_blank" class="item">CSR – Indonesia</a>
+                <a href="http://www.lse.ac.uk/socialPsychology/Home.aspx" target="_blank" class="item">Psychology@LSE</a>
+                <a href="http://www.geirso.uqam.ca/" target="_blank" class="item">GEIRSO Montréal</a>
+                <a href="http://www.centromoscovici.unb.br/" target="_blank" class="item">Centro Moscovici – Brasília</a>
+                <a href="http://www.fcc.org.br/pesquisa/ciers.html" target="_blank" class="item">CIERS-Ed Sao Paulo</a>
+                <a href="http://greps.univ-lyon2.fr/" target="_blank" class="item">Labo GRePS – Univ. Lyon 2</a>
+                <a href="http://www.lps-aix.com/" target="_blank" class="item">Labo LPS-AMU</a>
               </div>
-              <div class="seven wide column">
-                <h4 class="ui inverted header">Footer Header</h4>
-                <p>Il faudra décider de ce qu'on met ici.</p>
-              </div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header">Footer Header</h4>
+              <p>Il faudra décider de ce qu'on met ici.</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    
+    <script src='./assets/js/nprogress.js'></script>
+    <script src="./assets/js/vivus.min.js"></script>
+    <script src="./assets/js/layout.js" charset="utf-8"></script>
+    
+    <script src="./assets/js/slider.min.js"></script>
+    <script src="./assets/js/home.js" charset="utf-8"></script>
+    
+    
+  </body>
 
-      <script src='/assets/js/nprogress.js'></script>
-      <script src="/assets/js/vivus.min.js"></script>
-      <script src="/assets/js/layout.js" charset="utf-8"></script>
-      
-      <script src="/assets/js/slider.min.js"></script>
-      <script src="/assets/js/home.js" charset="utf-8"></script>
-      
-
-    </body>
-
-    </html>
+  </html>

@@ -2,6 +2,7 @@
 header: EASP Small Group Meeting in Honor of Serge Moscovici
 header_link: http://www.easp.eu/events/calendar/itm/easp_small_group_meeting_in_honor_of_serge_moscovici-46.html
 image: http://www.easp.eu/_images/easp-logo-default.png
+image_size: medium # e.g. small, medium, big or fluid (100%)
 image_link: http://www.easp.eu/events/calendar/itm/easp_small_group_meeting_in_honor_of_serge_moscovici-46.html  
 tags:
   - News

@@ -12,7 +12,7 @@ pill: 0
 
           {% for post in paginator.posts %}
           <div class="post">
-            <h3 class="ui header">
+            <h2 class="ui header">
               {% if post.header_link %}
               <a href="{{ post.header_link }}"  target="_blank">
                 {{ post.header }}
@@ -20,7 +20,25 @@ pill: 0
               {% else %}
               {{ post.header }}
               {% endif %}
-              <div class="sub header">Posté le {{ post.date | date: "%d %B %Y" }}</div>
+              <div class="sub header">Posté le
+                          {% assign m = post.date | date: "%-m" %}
+                          {{ post.date | date: "%-d" }}
+                          {% case m %}
+                          {% when '1' %}janvier
+                          {% when '2' %}février
+                          {% when '3' %}mars
+                          {% when '4' %}avril
+                          {% when '5' %}mai
+                          {% when '6' %}juin
+                          {% when '7' %}juillet
+                          {% when '8' %}août
+                          {% when '9' %}septembre
+                          {% when '10' %}octobre
+                          {% when '11' %}novembre
+                          {% when '12' %}décembre
+                          {% endcase %}
+                          {{ post.date | date: "%Y" }}
+                        </div>
               {% for tag in post.tags %}
               {% case tag %}
               {% when "News" %}
@@ -42,14 +60,24 @@ pill: 0
               {% else %}
               {% endcase %}
               {% endfor %}
-            </h3>
+            </h2>
             {% if post.image %}
             {% if post.image_link %}
-            <a href="{{ post.image_link }}" class="ui fluid image" target="_blank">
+            {% if post.image_size %}
+            <a href="{{ post.image_link }}" class="ui {{ post.image_size}} image" target="_blank">
               <img src="{{ post.image }}">
             </a>
             {% else %}
+            <a href="{{ post.image_link }}" class="ui fluid image" target="_blank">
+              <img src="{{ post.image }}">
+            </a>
+            {% endif %}
+            {% else %}
+            {% if post.image_size %}
+            <img class="ui {{ post.image_size}} image" src="{{ post.image }}">
+            {% else %}
             <img class="ui fluid image" src="{{ post.image }}">
+            {% endif %}
             {% endif %}
             <br>
             {% endif %}

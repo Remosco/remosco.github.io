@@ -1,0 +1,9 @@
+---
+header: "What and why questions in social representations: securing Moscovici’s legacy"
+people:
+  - name: George Gaskel
+    title: London School of Economics
+video: P6lKMdJSKeE
+date: 2016-11-18T14:15:00Z
+section: 3
+---

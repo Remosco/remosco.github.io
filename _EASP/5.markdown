@@ -1,0 +1,11 @@
+---
+header: Contexts and Conditions of Outgroup Influence
+people:
+  - name: Amber M. Gaffney
+    title: Humboldt State University
+  - name: Jiin Jung, William D. Crano, and Michael A. Hogg
+    title: Claremont Graduate University
+video: xEjhMEhDIAg
+date: 2016-11-17T11:40:00Z
+section: 1
+---

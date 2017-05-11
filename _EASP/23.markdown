@@ -1,0 +1,9 @@
+---
+header: "Future issues. The analysis of behaviour "
+people:
+  - name: Saadi Lahlou
+    title: London School of Economics
+video: G9TYnHpC3PA
+date: 2016-11-18T14:55:00Z
+section: 3
+---

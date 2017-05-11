@@ -1,0 +1,9 @@
+---
+header: "Future isues: Active minorities vs. Victimized minorities: An  Unfinished Task"
+people:
+  - name: Juan A. Pérez
+    title: University of Valencia
+video: x8Ilcl-QgUU
+date: 2016-11-18T16:10:00Z
+section: 3
+---

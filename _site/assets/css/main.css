@@ -1,15 +1,19 @@
 
-{
+/* Make clicks pass-through */
+#nprogress {
   pointer-events: none;
 }
+
+
+
 #nprogress .bar {
   background-color:  #1678c2;
   position: fixed;
-  z-index: 10;
-  top: 40px;
+  z-index: 1000;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 8px;
+  height: 3px;
 }
 #nprogress .bar .peg {
   display: block;
@@ -17,22 +21,36 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #1678c2, 0 0 5px  #1678c2;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
   opacity: 1.0;
+
   -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+transform: rotate(3deg) translate(0px, -4px);
 }
 
-
+a.anchor
+{
+  display: block;
+  position: relative;
+  top: -5em;
+  visibility: hidden;
+}
 .hidden.menu {
   display: none;
 }
 
 .masthead.segment {
-  min-height: 700px;
+  min-height: 185px;
+  height:50%;
+  max-height: 50%;
   padding-bottom: 1em;
   padding-top: 0em;
+	-ms-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+	-moz-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+	-webkit-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+	transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+  transform: translate3d(0, 0, 0);
 }
 .masthead .logo.item img {
   margin-right: 1em;
@@ -47,7 +65,8 @@
 }
 .masthead .logo-container {
   background-color: rgba(0,0,0,.85);
-  margin-top: 20em;
+  margin-top: 15em;
+  margin-bottom:5em;
   font-size: 4em;
   font-weight: normal;
   padding: 1em;
@@ -62,11 +81,10 @@
 .ui.vertical.stripe {
   padding: 8em 0em;
 }
-.ui.vertical.stripe h3 {
-  font-size: 2em;
-}
-.ui.vertical.stripe .post:not(:first-child) h3{
+
+.ui.vertical.stripe .post:not(:first-child) h2{
   padding-top: 0.5em;
+  padding-bottom: 0.2em;
 }
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
@@ -102,6 +120,13 @@
 .menu-container {
   background-color: rgba(0,0,0,.85);
 }
+.ui.secondary.inverted.menu a.item{
+  color:rgba(255, 255, 255, 0.9)!important;
+}
+.ui.feed > .event > .content .summary img.placeholder {
+  width:100%;
+  height:100%;
+}
 .secondary.pointing.menu .simple.dropdown > .menu {
   margin-top:0!important;
 }
@@ -125,7 +150,6 @@
 }
 .menu:not(.secondary) .dropdown.item.current:after{
 visibility: visible!important;
-z-index: 100!important;
 background: #3d3e3f !important;
 margin: 0 !important;
 box-shadow: none !important;

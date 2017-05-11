@@ -1,0 +1,9 @@
+---
+header: "How «human history of nature» and the theory of minorities shed light on the dialogical part of social representations. The case of psychologists addressing ecological issues"
+people:
+  - name: Sabine Caillaud
+    title: Paris-Descartes University
+video: iAKnkos-s6I
+date: 2016-11-18T10:05:00Z
+section: 2
+---

@@ -1,0 +1,9 @@
+---
+header: "Future issues: Methods and themes"
+people:
+  - name: Themis Apostolidis
+    title: University of Aix-Marseille
+video: wKTtCsK9DEA
+date: 2016-11-18T15:15:00Z
+section: 3
+---

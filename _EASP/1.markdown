@@ -1,0 +1,13 @@
+---
+header: Introduction
+people:
+- name: Gretty Mirdal
+  title: directrice de l'IEA de Paris
+- name: Juan Perez
+  title: University Valencia
+- name: Saadi Lahlou
+  title: London School of Economics
+video: cJwJdOVLJx0
+date: 2016-11-17T09:30:00Z
+section: 1
+---

@@ -1,0 +1,9 @@
+---
+header: "Minorities, Meanings, and the Structure of Group Influence: Reflecting and Building Upon the Theoretical Contributions of Serge Moscovici"
+people:
+  - name: Timothy B. Hayes and Wendy Wood
+    title: University of Southern California
+video: 5r_zdbQ5TCU
+date: 2016-11-17T12:20:00Z
+section: 1
+---

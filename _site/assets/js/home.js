@@ -15,19 +15,13 @@ $( document ).ready(function() {
     once: false,
     onBottomPassed: function() {
       $('.fixed.menu').transition('fade in');
-      $('#nprogress .bar')
-      .css ("top", "40px")
-      .css ("z-index", "10")
-      .css ("height", "8px");
     },
     onBottomPassedReverse: function() {
       $('.fixed.menu').transition('fade out');
-      $('#nprogress .bar')
-      .css ("top", "0")
-      .css ("z-index", "100")
-      .css ("height", "2px");
+
     }
   })
+
   // load splash
 
   $('.logo-container')

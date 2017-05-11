@@ -1,0 +1,9 @@
+---
+header: Psychologie sociale et recherches sur l’influence minoritaire
+people:
+  - name: Bernard Personnaz
+    title: Centre Edgar Morin IIAC EHESS-CNRS
+video: LJ1Yazt1O0c
+date: 2016-11-17T14:15:00Z
+section: 1
+---

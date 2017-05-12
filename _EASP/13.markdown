@@ -1,5 +1,5 @@
 ---
-header: "Understanding Complexity in Social Engagement with Multiculturalism: why a Multimethod Approach is needed to unravel the Contention with ‘Differences’"
+title: "Understanding Complexity in Social Engagement with Multiculturalism: why a Multimethod Approach is needed to unravel the Contention with ‘Differences’"
 people:
   - name: Babette Gekeler
     title: Institute for Medical Psychology, Charité University Hospitals, Berlin

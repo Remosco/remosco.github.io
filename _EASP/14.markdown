@@ -1,5 +1,5 @@
 ---
-header: "To a semiotic approach to Serge Moscovici’s thinking"
+title: "To a semiotic approach to Serge Moscovici’s thinking"
 people:
   - name: Jorge Correia Jesuino
     title: Instituto Superior de Ciências Sociais e Políticas (ISCSP), University of Lisbon

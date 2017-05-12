@@ -15,12 +15,12 @@ pill: 4
           <h2>Accès rapide</h2>
 
 
-            <div class="ui secondary vertical menu fluid">
-              <div class="ui dropdown item">
-                <input name="filters" type="hidden">
-                <span class="text">
-                  <i class="search icon"></i>
-                  Recherche par intervenant</span>
+          <div class="ui secondary vertical menu fluid">
+            <div class="ui dropdown item">
+              <input name="filters" type="hidden">
+              <span class="text">
+                <i class="search icon"></i>
+                Recherche par intervenant</span>
                 <div class="menu " style="z-index:3;">
                   <div class="header">
                     Recherche par intervenant
@@ -37,52 +37,34 @@ pill: 4
                   </div>
                   <div class="menu scrolling" >
                     {% for event in first_day_conferences %}
-                    <a class="item" href="#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
-                      <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                      <span class="description">  {% for people in event.people %}
-                        {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                        {% endfor %}</span>
-                        <span class="text">{{ event.header }}</span>
-                      </a>
-                      {% endfor %}
-                    </div>
-                    <div class="header">
-                      <i class="calendar icon"></i>
-                      Mardi 18 Novembre 2016
-                    </div>
-                    <div class="menu scrolling">
-                      {% for event in second_day_conferences %}
-                      <a class="item" href="#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
-                        <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                        <span class="description">  {% for people in event.people %}
-                          {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                          {% endfor %}</span>
-                          <span class="text">{{ event.header }}</span>
-                        </a>
-                        {% endfor %}
-                    </div>
-                    <div class="header">
-                      <i class="calendar icon"></i>
-                      Mardi 18 Novembre 2016 (Session publique)
-                    </div>
-                    <div class="menu scrolling">
-                      {% for event in public_conferences %}
-                      <a class="item" href="#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
-                        <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                        <span class="description">  {% for people in event.people %}
-                          {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                          {% endfor %}</span>
-                          <span class="text">{{ event.header }}</span>
-                        </a>
-                        {% endfor %}
-                    </div>
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
+                  </div>
+                  <div class="header">
+                    <i class="calendar icon"></i>
+                    Mardi 18 Novembre 2016
+                  </div>
+                  <div class="menu scrolling">
+                    {% for event in second_day_conferences %}
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
+                  </div>
+                  <div class="header">
+                    <i class="calendar icon"></i>
+                    Mardi 18 Novembre 2016 (Session publique)
+                  </div>
+                  <div class="menu scrolling">
+                    {% for event in public_conferences %}
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
                   </div>
                 </div>
-                <div class="ui dropdown item" id="title_filter">
-                  <input name="filters" type="hidden">
-                  <span class="text">
-                    <i class="search icon"></i>
-                    Recherche par titre</span>
+              </div>
+              <div class="ui dropdown item" id="title_filter">
+                <input name="filters" type="hidden">
+                <span class="text">
+                  <i class="search icon"></i>
+                  Recherche par titre</span>
                   <div class="menu " id="title_filter_menu">
                     <div class="ui icon search input">
                       <i class="search icon"></i>
@@ -95,13 +77,7 @@ pill: 4
                     </div>
                     <div class="menu scrolling">
                       {% for event in first_day_conferences %}
-                      <a class="item" href="#{{ event.title }}" data-text="{{ event.header }}">
-                        <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                        <span class="description">  {% for people in event.people %}
-                          {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                          {% endfor %}</span>
-                          <span class="text">{{ event.header }}</span>
-                        </a>
+                      {% include event_shortcut.html mode='header' %}
                         {% endfor %}
                       </div>
                       <div class="header">
@@ -110,206 +86,71 @@ pill: 4
                       </div>
                       <div class="menu scrolling">
                         {% for event in second_day_conferences %}
-                        <a class="item" href="#{{ event.title }}" data-text="{{ event.header }}">
-                          <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                          <span class="description">  {% for people in event.people %}
-                            {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                            {% endfor %}</span>
-                            <span class="text">{{ event.header }}</span>
-                          </a>
+                        {% include event_shortcut.html mode='header' %}
+
                           {% endfor %}
+                        </div>
+                        <div class="header">
+                          <i class="calendar icon"></i>
+                          Mardi 18 Novembre 2016 (Session publique)
+                        </div>
+                        <div class="menu scrolling">
+                          {% for event in public_conferences %}
+                          {% include event_shortcut.html mode='header' %}
+                            {% endfor %}
+                          </div>
+                        </div>
                       </div>
-                      <div class="header">
-                        <i class="calendar icon"></i>
-                        Mardi 18 Novembre 2016 (Session publique)
+                    </div>
+
+                  </div>
+                </div>
+                <div class="twelve wide column"  id="main">
+                  <div class="ui text container">
+                    <h1 class="ui header">
+                      EASP 2016 - Programme et vidéos
+                      <div class="sub header">La version pdf du programme de l'EASP 2016 est <a href="http://greps.univ-lyon2.fr/medias/fichier/iea-programme-tributemoscovici-diffsite_1477550705609-pdf" target="_blank">disponible ici</a>.</div>
+                    </h1>
+                    <div id="container">
+                      <h2 class="ui grey center aligned icon header">
+                        <i class="circular calendar icon"></i>
+                        Jeudi 11 Novembre 2016
+                      </h2>
+
+                      <div class="ui large feed">
+                        {% for event in first_day_conferences %}
+                        {% include EASP_event.html %}
+                        {% endfor %}
                       </div>
-                      <div class="menu scrolling">
+                      <h2 class="ui grey center aligned icon header">
+                        <i class="circular calendar icon"></i>
+                        Vendredi 18 Novembre 2016
+                      </h2>
+
+                      <div class="ui large feed">
+                        {% for event in second_day_conferences %}
+                        {% include EASP_event.html %}
+                        {% endfor %}
+                      </div>
+                      <h2 class="ui center aligned icon header">
+                        <i class="circular comments outline icon grey"></i>
+                        Future directions for a societal psychology
+                        <div class="sub header">Public session</div>
+                      </h2>
+                      <div class="ui divider"></div>
+                      <div class="ui large feed">
                         {% for event in public_conferences %}
-                        <a class="item" href="#{{ event.title }}" data-text="{{ event.header }}">
-                          <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                          <span class="description">  {% for people in event.people %}
-                            {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                            {% endfor %}</span>
-                            <span class="text">{{ event.header }}</span>
-                          </a>
-                          {% endfor %}
+                        {% include EASP_event.html %}
+                        {% endfor %}
                       </div>
                     </div>
                   </div>
-            </div>
 
-          </div>
-        </div>
-        <div class="twelve wide column"  id="main">
-          <div class="ui text container">
-            <h1 class="ui header">
-              EASP 2016 - Programme et vidéos
-              <div class="sub header">La version pdf du programme de l'EASP 2016 est <a href="http://greps.univ-lyon2.fr/medias/fichier/iea-programme-tributemoscovici-diffsite_1477550705609-pdf" target="_blank">disponible ici</a>.</div>
-            </h1>
-            <div id="container">
-              <h2 class="ui grey center aligned icon header">
-                <i class="circular calendar icon"></i>
-                Jeudi 11 Novembre 2016
-              </h2>
-
-              <div class="ui large feed">
-                {% for event in first_day_conferences %}
-                <a class="anchor" name="{{ event.title }}"></a>
-
-                <div class="event">
-                  <div class="label">
-                    <img src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                  </div>
-                  <div class="content">
-                    <h2>{{ event.header }}</h2>
-                    <div class="date">
-                      Le
-                      {% assign m = event.date | date: "%-m" %}
-                      {{ event.date | date: "%-d" }}
-                      {% case m %}
-                      {% when '1' %}janvier
-                      {% when '2' %}février
-                      {% when '3' %}mars
-                      {% when '4' %}avril
-                      {% when '5' %}mai
-                      {% when '6' %}juin
-                      {% when '7' %}juillet
-                      {% when '8' %}août
-                      {% when '9' %}septembre
-                      {% when '10' %}octobre
-                      {% when '11' %}novembre
-                      {% when '12' %}décembre
-                      {% endcase %}
-                      {{ event.date | date: "%Y" }}
-                      à {{ event.date | date: "%R" }}
-                    </div>
-                    <div class="summary">
-                      {% for people in event.people %}
-                      {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                      {% if forloop.last == false %}
-                      <br>
-                      {% endif %}
-                      {% endfor %}
-                      <br>
-                      <div class="ui divider"></div>
-                      <div class="ui embed" data-source="youtube"  data-url="https://www.youtube.com/embed/{{ event.video }}?enablejsapi=1" data-placeholder="http://img.youtube.com/vi/{{ event.video }}/default.jpg"></div>
-
-                    </div>
-                  </div>
                 </div>
-                {% endfor %}
-              </div>
-              <h2 class="ui grey center aligned icon header">
-                <i class="circular calendar icon"></i>
-                Vendredi 18 Novembre 2016
-              </h2>
 
-              <div class="ui large feed">
-                {% for event in second_day_conferences %}
-                <a class="anchor"  name="{{ event.title }}" ></a>
-                <div class="event"  >
-                  <div class="label">
-                    <img src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                  </div>
-                  <div class="content">
-                    <h2>{{ event.header }}</h2>
-                    <div class="date">
-                      Le
-                      {% assign m = event.date | date: "%-m" %}
-                      {{ event.date | date: "%-d" }}
-                      {% case m %}
-                      {% when '1' %}janvier
-                      {% when '2' %}février
-                      {% when '3' %}mars
-                      {% when '4' %}avril
-                      {% when '5' %}mai
-                      {% when '6' %}juin
-                      {% when '7' %}juillet
-                      {% when '8' %}août
-                      {% when '9' %}septembre
-                      {% when '10' %}octobre
-                      {% when '11' %}novembre
-                      {% when '12' %}décembre
-                      {% endcase %}
-                      {{ event.date | date: "%Y" }}
-                      à {{ event.date | date: "%R" }}
-                    </div>
-                    <div class="summary">
-                      {% for people in event.people %}
-                      {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                      {% if forloop.last == false %}
-                      <br>
-                      {% endif %}
-                      {% endfor %}
-                      <br>
-                      <div class="ui divider"></div>
-                      <div class="ui embed" data-source="youtube"  data-url="https://www.youtube.com/embed/{{ event.video }}?enablejsapi=1" data-placeholder="http://img.youtube.com/vi/{{ event.video }}/default.jpg"></div>
-
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
+                <!-- Pagination links -->
               </div>
-              <h2 class="ui center aligned icon header">
-                <i class="circular comments outline icon grey"></i>
-                Future directions for a societal psychology
-                <div class="sub header">Public session</div>
-              </h2>
-              <div class="ui divider"></div>
-              <div class="ui large feed">
-                {% for event in public_conferences %}
-                <a  class="anchor" name="{{ event.title }}"></a>
-                <div class="event" >
-                  <div class="label">
-                    <img src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
-                  </div>
-                  <div class="content">
-                    <h2>{{ event.header }}</h2>
-                    <div class="date">
-                      Le
-                      {% assign m = event.date | date: "%-m" %}
-                      {{ event.date | date: "%-d" }}
-                      {% case m %}
-                      {% when '1' %}janvier
-                      {% when '2' %}février
-                      {% when '3' %}mars
-                      {% when '4' %}avril
-                      {% when '5' %}mai
-                      {% when '6' %}juin
-                      {% when '7' %}juillet
-                      {% when '8' %}août
-                      {% when '9' %}septembre
-                      {% when '10' %}octobre
-                      {% when '11' %}novembre
-                      {% when '12' %}décembre
-                      {% endcase %}
-                      {{ event.date | date: "%Y" }}
-                      à {{ event.date | date: "%R" }}
-                    </div>
-                    <div class="summary">
-                      {% for people in event.people %}
-                      {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
-                      {% if forloop.last == false %}
-                      <br>
-                      {% endif %}
-                      {% endfor %}
-                      <br>
-                      <div class="ui divider"></div>
-                      <div class="ui embed" data-source="youtube"  data-url="https://www.youtube.com/embed/{{ event.video }}?enablejsapi=1" data-placeholder="http://img.youtube.com/vi/{{ event.video }}/default.jpg"></div>
 
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
+
             </div>
           </div>
-
-        </div>
-
-        <!-- Pagination links -->
-      </div>
-
-
-    </div>
-  </div>

@@ -1,5 +1,5 @@
 ---
-header: "For a «psychology of our «culture»"
+title: "For a «psychology of our «culture»"
 people:
   - name: Dorra Ben Alaya
     title: Tunis El Manar University

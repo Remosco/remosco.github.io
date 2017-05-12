@@ -8,6 +8,8 @@ collections:
   - members
   - EASP
 lang: fr
+feed:
+  title: header
 sass:
   sass_dir: assets/_sass
   style: compressed

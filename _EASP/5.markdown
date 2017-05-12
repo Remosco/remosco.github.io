@@ -1,5 +1,5 @@
 ---
-header: Contexts and Conditions of Outgroup Influence
+title: Contexts and Conditions of Outgroup Influence
 people:
   - name: Amber M. Gaffney
     title: Humboldt State University

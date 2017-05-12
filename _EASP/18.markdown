@@ -1,5 +1,5 @@
 ---
-header: "The Invention of Society and the Isolation of Social Psychology"
+title: "The Invention of Society and the Isolation of Social Psychology"
 people:
   - name: Gina Philogene
     title: Sarah Lawrence College, New York

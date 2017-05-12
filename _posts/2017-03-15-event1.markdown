@@ -1,6 +1,6 @@
 ---
-header: 13eme Conférence Internationale sur les Représentations Sociales
-header_link: http://cirs2016.sciencesconf.org/
+title: 13eme Conférence Internationale sur les Représentations Sociales
+title_link: http://cirs2016.sciencesconf.org/
 image: https://cirs2016.sciencesconf.org/data/header/LOGO_CIRS_2016_Vecto_Site.png
 image_size: medium # e.g. small, medium, big or fluid (100%)
 image_link: http://cirs2016.sciencesconf.org/  

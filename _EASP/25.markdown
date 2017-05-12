@@ -1,5 +1,5 @@
 ---
-header: "Future issues: On forms of social thinking"
+title: "Future issues: On forms of social thinking"
 people:
   - name: Nikos Kalampalikis
     title: Lumière Lyon 2 University

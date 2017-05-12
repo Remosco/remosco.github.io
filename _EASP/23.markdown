@@ -1,5 +1,5 @@
 ---
-header: "Future issues. The analysis of behaviour "
+title: "Future issues. The analysis of behaviour "
 people:
   - name: Saadi Lahlou
     title: London School of Economics

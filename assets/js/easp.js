@@ -3,6 +3,17 @@ $( document ).ready(function() {
   .dropdown({
     fullTextSearch:"exact",
      action: 'hide',
+     onShow: function () {
+    $(".content").addClass("dimmable dimmed")
+    // left button
+
+// right button
+     },
+     onHide: function () {
+     $(".content").removeClass("dimmable dimmed")
+  //  $('.pusher:first').dimmer('hide');
+
+     }
   })
   ;
   var tag = document.createElement('script');

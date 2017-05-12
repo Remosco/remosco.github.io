@@ -9,15 +9,16 @@
   <!-- Site Properties -->
   <title>REMOSCO - {{ page.title }}</title>
 
-  <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
-  <link rel="stylesheet" type="text/css"  href="./assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="{{ root }}/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css"  href="{{ root }}/assets/css/main.css" />
+  {% assign root = github.site.baseurl %}
 
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 
-  <script src="./semantic/dist/semantic.min.js"></script>
+  <script src="{{ root }}/semantic/dist/semantic.min.js"></script>
    {% seo %}
 </head>
 <body>
@@ -28,32 +29,32 @@
     <div class="ui huge inverted top fixed menu">
       {% endif %}
       <div class="ui container">
-        <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="./">Actualités</a>
+        <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
         <div {% if page.pill == 1 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
           Notre projet <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="./activities.html">Activités</a>
-            <a class="item" href="./events.html">Actions soutenues</a>
-            <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+            <a class="item" href="{{ root }}/activities.html">Activités</a>
+            <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
+            <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
           </div>
         </div>
-        <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="./network.html">Notre réseau</a>
+        <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
         <div {% if page.pill == 3 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
           Serge Moscovici <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="./background.html">Son parcours</a>
-            <a class="item" href="./videos.html">Ses vidéos</a>
-            <a class="item" href="./bibliography.html">Sa bibliographie</a>
-            <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
-            <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+            <a class="item" href="{{ root }}/background.html">Son parcours</a>
+            <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
+            <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
+            <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+            <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
           </div>
         </div>
         <div class="right item">
           <div class="ui simple dropdown inverted button">
             EASP 2016<i class="dropdown icon"></i>
             <div class="menu">
-              <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
-              <a class="item" href="./EASP-members.html">Participants</a>
+              <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+              <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
             </div>
           </div>
         </div>
@@ -63,31 +64,31 @@
 
     <!-- Sidebar Menu -->
     <div class="ui vertical inverted sidebar menu">
-      <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="./">Actualités</a>
+      <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
       <div {% if page.pill == 1 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
         Notre projet <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="./activities.html">Activités</a>
-          <a class="item" href="./events.html">Actions soutenues</a>
-          <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+          <a class="item" href="{{ root }}/activities.html">Activités</a>
+          <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
+          <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
         </div>
       </div>
-      <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="./network.html">Notre réseau</a>
+      <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
       <div {% if page.pill == 3 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
         Serge Moscovici <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="./background.html">Son parcours</a>
-          <a class="item" href="./videos.html">Ses vidéos</a>
-          <a class="item" href="./bibliography.html">Sa bibliographie</a>
-          <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
-          <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+          <a class="item" href="{{ root }}/background.html">Son parcours</a>
+          <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
+          <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
+          <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+          <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
         </div>
       </div>
       <div {% if page.pill == 4 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
         EASP 2016 <i class="dropdown icon"></i>
         <div class="menu">
-          <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
-          <a class="item" href="./EASP-members.html">Participants</a>
+          <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+          <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
         </div>
       </div>
     </div>
@@ -96,12 +97,12 @@
     <!-- Page Contents -->
     <div class="pusher">
       {% if page.title == "Actualités" %}
-      <div class="ui inverted vertical masthead center aligned segment hidden" data-slides='["./assets/images/splash.png","./assets/images/splash1.jpeg","./assets/images/splash2.jpg"]'>
+      <div class="ui inverted vertical masthead center aligned segment hidden" data-slides='["{{ root }}/assets/images/splash.png","{{ root }}/assets/images/splash1.jpeg","{{ root }}/assets/images/splash2.jpg"]'>
         <!-- image preload -->
         <div hidden>
-          <img class="ui image fluid" src="./assets/images/splash.png">
-          <img class="ui image fluid" src="./assets/images/splash1.jpeg">
-          <img class="ui image fluid" src="./assets/images/splash2.jpg">
+          <img class="ui image fluid" src="{{ root }}/assets/images/splash.png">
+          <img class="ui image fluid" src="{{ root }}/assets/images/splash1.jpeg">
+          <img class="ui image fluid" src="{{ root }}/assets/images/splash2.jpg">
         </div> <!-- /.image preload -->
         <div class="row menu-container">
           <div class="ui container">
@@ -109,32 +110,32 @@
               <a class="toc item">
                 <i class="sidebar icon"></i>
               </a>
-              <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="./">Actualités</a>
+              <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
               <div {% if page.pill == 1 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
                 Notre projet <i class="dropdown icon"></i>
                 <div class="menu">
-                  <a class="item" href="./activities.html">Activités</a>
-                  <a class="item" href="./events.html">Actions soutenues</a>
-                  <a class="item" href="./chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+                  <a class="item" href="{{ root }}/activities.html">Activités</a>
+                  <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
+                  <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
                 </div>
               </div>
-              <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="./network.html">Notre réseau</a>
+              <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
               <div {% if page.pill == 3 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
                 Serge Moscovici <i class="dropdown icon"></i>
                 <div class="menu">
-                  <a class="item" href="./background.html">Son parcours</a>
-                  <a class="item" href="./videos.html">Ses vidéos</a>
-                  <a class="item" href="./bibliography.html">Sa bibliographie</a>
-                  <a class="item" href="./tributes.html">Hommages à Serge Moscovici</a>
-                  <a class="item" href="./in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+                  <a class="item" href="{{ root }}/background.html">Son parcours</a>
+                  <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
+                  <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
+                  <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+                  <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
                 </div>
               </div>
               <div class="right item">
                 <div class="ui simple dropdown inverted button">
                   EASP 2016<i class="dropdown icon"></i>
                   <div class="menu">
-                    <a class="item" href="./EASP-videos.html">Programme et vidéos</a>
-                    <a class="item" href="./EASP-members.html">Participants</a>
+                    <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+                    <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
                   </div>
                 </div>
               </div>
@@ -142,12 +143,13 @@
           </div>
         </div>
         <div class="ui text container logo-container transition hidden large screen only">
-          <object class="hidden" id="logo" type="image/svg+xml" data="./assets/images/logo.svg" style="visibility:hidden;"></object>
+          <object class="hidden" id="logo" type="image/svg+xml" data="{{ root }}/assets/images/logo.svg" style="visibility:hidden;"></object>
           <h2 class="hidden subtitle">Réseau Mondial Serge Moscovici</h2>
         </div>
       </div>
       {% endif %}
       <div class="content">
+         <div class="ui simple dimmer"></div>
         {{ content }}
       </div>
 
@@ -157,7 +159,8 @@
             <div class="three wide column">
               <h4 class="ui inverted header">A propos</h4>
               <div class="ui inverted link list">
-                <a href="#" class="item">Carte du site</a>
+                <a href="{{ root }}/sitemap.xml" class="item">Carte du site</a>
+                <a href="{{ root }}/feed.xml" class="item">Flux RSS</a>
                 <a href="#" class="item">Crédits</a>
                 <a href="#" class="item">Nous contacter</a>
               </div>
@@ -196,15 +199,15 @@
     })();
     </script>
     {% endif %}
-    <script src='./assets/js/nprogress.js'></script>
-    <script src="./assets/js/vivus.min.js"></script>
-    <script src="./assets/js/layout.js" charset="utf-8"></script>
+    <script src='{{ root }}/assets/js/nprogress.js'></script>
+    <script src="{{ root }}/assets/js/vivus.min.js"></script>
+    <script src="{{ root }}/assets/js/layout.js" charset="utf-8"></script>
     {% if page.pill == 0 %}
-    <script src="./assets/js/slider.min.js"></script>
-    <script src="./assets/js/home.js" charset="utf-8"></script>
+    <script src="{{ root }}/assets/js/slider.min.js"></script>
+    <script src="{{ root }}/assets/js/home.js" charset="utf-8"></script>
     {% endif %}
     {% if page.pill == 4 %}
-    <script src="./assets/js/easp.js"></script>
+    <script src="{{ root }}/assets/js/easp.js"></script>
     {% endif %}
   </body>
 

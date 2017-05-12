@@ -1,5 +1,5 @@
 ---
-header: "Is There a Social Psychology of Historic Grievances and Intergroup Conflict in the Age of ‘Radicalisation’?"
+title: "Is There a Social Psychology of Historic Grievances and Intergroup Conflict in the Age of ‘Radicalisation’?"
 people:
   - name: Andreea Ernst-Vintila
     title: Paris-Ouest-Nanterre-la-Défense University

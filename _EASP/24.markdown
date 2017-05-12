@@ -1,5 +1,5 @@
 ---
-header: "Future issues: Methods and themes"
+title: "Future issues: Methods and themes"
 people:
   - name: Themis Apostolidis
     title: University of Aix-Marseille

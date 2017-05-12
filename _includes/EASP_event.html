@@ -1,0 +1,43 @@
+<a class="anchor" name="{{ event.title }}"></a>
+
+<div class="event">
+  <div class="label">
+    <img src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
+  </div>
+  <div class="content">
+    <h2>{{ event.title }}</h2>
+    <div class="date">
+      Le
+      {% assign m = event.date | date: "%-m" %}
+      {{ event.date | date: "%-d" }}
+      {% case m %}
+      {% when '1' %}janvier
+      {% when '2' %}février
+      {% when '3' %}mars
+      {% when '4' %}avril
+      {% when '5' %}mai
+      {% when '6' %}juin
+      {% when '7' %}juillet
+      {% when '8' %}août
+      {% when '9' %}septembre
+      {% when '10' %}octobre
+      {% when '11' %}novembre
+      {% when '12' %}décembre
+      {% endcase %}
+      {{ event.date | date: "%Y" }}
+      à {{ event.date | date: "%R" }}
+    </div>
+    <div class="summary">
+      {% for people in event.people %}
+      {{ people.name }} <span style="font-weight:400;">({{ people.title }})</span>
+      {% if forloop.last == false %}
+      <br>
+      {% endif %}
+      {% endfor %}
+      <br>
+      <div class="ui divider"></div>
+      <div class="ui embed" data-source="youtube"  data-url="https://www.youtube.com/embed/{{ event.video }}?enablejsapi=1" data-placeholder="http://img.youtube.com/vi/{{ event.video }}/default.jpg"></div>
+
+    </div>
+  </div>
+</div>

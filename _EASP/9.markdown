@@ -1,5 +1,5 @@
 ---
-header: "Validation of Everyday Knowledge: The role of Consensus and Perceived Heterogeneity"
+title: "Validation of Everyday Knowledge: The role of Consensus and Perceived Heterogeneity"
 people:
   - name: Diniz Lopes
     title: ISCTE-IUL, CIS-IUL, Lisbon

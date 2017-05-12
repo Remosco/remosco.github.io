@@ -1,5 +1,5 @@
 ---
-header: "De la polarisation à la radicalisation"
+title: "De la polarisation à la radicalisation"
 people:
   - name: Marie Personnaz
     title: Paris-Ouest-Nanterre-la-Défense University - Centre Edgar Morin IIAC EHESS-CNRS

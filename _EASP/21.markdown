@@ -1,5 +1,5 @@
 ---
-header: "What and why questions in social representations: securing Moscovici’s legacy"
+title: "What and why questions in social representations: securing Moscovici’s legacy"
 people:
   - name: George Gaskel
     title: London School of Economics

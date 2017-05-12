@@ -1,5 +1,5 @@
 ---
-header: Serge Moscovici, un dialogue avec Pascal Dibie (inédit)
+title: Serge Moscovici, un dialogue avec Pascal Dibie (inédit)
 video: wNpRg02Rmho
 tags:
   - Video

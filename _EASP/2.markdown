@@ -1,5 +1,5 @@
 ---
-header: The legacy of Serge Moscovici
+title: The legacy of Serge Moscovici
 people:
   - name: Charlan Nemeth
     title: University of California, Berkeley

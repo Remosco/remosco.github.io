@@ -1,5 +1,5 @@
 ---
-header: The discrete charm of the genetic model of influence and its indirect impact on epistemic level
+title: The discrete charm of the genetic model of influence and its indirect impact on epistemic level
 people:
   - name: Stamos Papastamou
     title: Panteion University of Social and Political Sciences

@@ -1,5 +1,5 @@
 ---
-header: "The formation processes re-visited – the importance of naturalized representations "
+title: "The formation processes re-visited – the importance of naturalized representations "
 people:
   - name: Inari Sakki, Rusten Menard and EEmeli Hakoköngäs Sakki
     title: University of Helsinki

@@ -7,7 +7,6 @@ pill: 4
 {% assign first_day_speakers = (first_day_conferences | where: 'people' , "1" | sort: 'date') %}
 {% assign second_day_conferences = (site.EASP | where: 'section' , "2" | sort: 'date') %}
 {% assign public_conferences = (site.EASP | where: 'section' , "3" | sort: 'date') %}
-
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned grid container">
     <div class="row">
@@ -22,17 +21,21 @@ pill: 4
                 <span class="text">
                   <i class="search icon"></i>
                   Recherche par intervenant</span>
-                <div class="menu">
+                <div class="menu " style="z-index:3;">
+                  <div class="header">
+                    Recherche par intervenant
+                  </div>
+
                   <div class="ui icon search input">
                     <i class="search icon"></i>
-                    <input placeholder="Nom de l'auteur" type="text">
+                    <input placeholder="Nom de l'intervenant" type="text">
                   </div>
                   <div class="divider"></div>
                   <div class="header">
                     <i class="calendar icon"></i>
                     Lundi 17 Novembre 2016
                   </div>
-                  <div class="menu scrolling">
+                  <div class="menu scrolling" >
                     {% for event in first_day_conferences %}
                     <a class="item" href="#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
                       <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
@@ -75,12 +78,12 @@ pill: 4
                     </div>
                   </div>
                 </div>
-                <div class="ui dropdown item">
+                <div class="ui dropdown item" id="title_filter">
                   <input name="filters" type="hidden">
                   <span class="text">
                     <i class="search icon"></i>
                     Recherche par titre</span>
-                  <div class="menu">
+                  <div class="menu " id="title_filter_menu">
                     <div class="ui icon search input">
                       <i class="search icon"></i>
                       <input placeholder="Nom de l'auteur" type="text">

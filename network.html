@@ -3,7 +3,13 @@ layout: default
 title: Notre réseau
 pill: 2
 ---
+{% for member in site.data.members %}
+{% assign key = member.firstname | append: '-' | append: member.lastname %}
 
+
+{% include member.html %}
+
+{% endfor %}
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">
     <div class="row">
@@ -11,12 +17,48 @@ pill: 2
         <div class="ui text container">
           <h1 class="ui header">Notre réseau</h1>
           <div class="ui divider"></div>
-          <h2 class="ui header">Président d'honneur</h2>
-          <h2 class="ui header">Comité de Direction</h2>
+          <h2 class="ui header">
+             <div class="sub header">Président d'honneur</div>
+             Serge Moscovici (Ehess – FMSH) (2014†)
+          </h2>
+Réseau créé à l’initiative de Serge Moscovici, en continuité avec le Laboratoire Européen de Psychologie Sociale
+<div class="ui divider"></div>
+          <h2 class="ui header">
+          Comité de Direction
+          </h2>
+<ul>
+  {% for member in site.data.members %}
+  {% assign key = member.firstname | append: '-' | append: member.lastname %}
+  <li>
+    <a onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
+  </li>
+  {% endfor %}
+</ul>
           <h2 class="ui header">Membres d’honneur</h2>
+          <ul>
+            {% for member in site.data.members %}
+            <li>
+              <b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}<br>
+            </li>
+            {% endfor %}
+          </ul>
           <h2 class="ui header">Conseil Scientifique International</h2>
           <h3 class="ui header">Membres de droit (Professeurs fondateurs des Centres créés avec l’aide du Fonds Balzan)</h3>
+          <ul>
+            {% for member in site.data.members %}
+            <li>
+              <b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}<br>
+            </li>
+            {% endfor %}
+          </ul>
           <h3 class="ui header">Membres invités</h3>
+          <ul>
+            {% for member in site.data.members %}
+            <li>
+              <b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}<br>
+            </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
       {% include rail.html %}

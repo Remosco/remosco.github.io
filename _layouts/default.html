@@ -1,12 +1,16 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  {% assign root = site.github.baseurl %}
-<!--  {% assign root = "." %}-->
+  {% assign root = site.github.url %}
+  <!--  {% assign root = "." %}-->
 
   <!-- Site Properties -->
   <title>REMOSCO - {{ page.title }}</title>
@@ -30,32 +34,45 @@
     <div class="ui huge inverted top fixed menu">
       {% endif %}
       <div class="ui container">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="header toc item">
+          <a href="{{ root }}" class="ui image fluid">
+            <img src="{{ root }}/assets/images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="header item">
+          <a href="{{ root }}" class="ui image fluid">
+            <img src="{{ root }}/assets/images/logo.png" alt="">
+          </a>
+        </div>
         <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
-        <div {% if page.pill == 1 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
+        <div {% if page.pill == 1 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
           Notre projet <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="{{ root }}/activities.html">Activités</a>
-            <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
-            <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+            <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
+            <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
+            <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
           </div>
         </div>
         <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
-        <div {% if page.pill == 3 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
+        <div {% if page.pill == 3 %} class="ui dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
           Serge Moscovici <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" href="{{ root }}/background.html">Son parcours</a>
-            <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
-            <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
-            <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-            <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+            <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
+            <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
+            <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
+            <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+            <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
           </div>
         </div>
         <div class="right item">
-          <div class="ui simple dropdown inverted button">
+          <div class="ui dropdown inverted button">
             EASP 2016<i class="dropdown icon"></i>
-            <div class="menu">
-              <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-              <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
+            <div class="menu"  style="right: 0;left: auto;">
+              <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+              <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
             </div>
           </div>
         </div>
@@ -65,40 +82,47 @@
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
-    <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
-    <div {% if page.pill == 1 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
-      Notre projet <i class="dropdown icon"></i>
+    <a class="ui header item" href="{{ root }}/">
+      <img src="{{ root }}/assets/images/logo.png" alt="">
+    </a>
+    <br>    <a {% if page.pill == 0 %} class=" header item active" {% else %}class=" header item"{% endif %} href="{{ root }}/">Actualités</a>
+    <div {% if page.pill == 1 %} class="header item active" {% else %}class=" header item"{% endif %}>
+      Notre projet
       <div class="menu">
-        <a class="item" href="{{ root }}/activities.html">Activités</a>
-        <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
-        <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+        <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
+        <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
+        <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
       </div>
     </div>
-    <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
-    <div {% if page.pill == 3 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
-      Serge Moscovici <i class="dropdown icon"></i>
+    <a {% if page.pill == 2 %} class=" header item active" {% else %}class=" header item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
+    <div {% if page.pill == 3 %} class=" header item active" {% else %}class=" header item"{% endif %}>
+      Serge Moscovici
       <div class="menu">
-        <a class="item" href="{{ root }}/background.html">Son parcours</a>
-        <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
-        <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
-        <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-        <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+        <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
+        <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
+        <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
+        <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+        <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
       </div>
     </div>
-    <div {% if page.pill == 4 %} class="ui simple dropdown item inverted current" {% else %}class="ui simple dropdown item"{% endif %}>
-      EASP 2016 <i class="dropdown icon"></i>
+    <div {% if page.pill == 4 %} class=" item header active" {% else %}class=" header item"{% endif %}>
+      Small meeting EASP 2016
       <div class="menu">
-        <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-        <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
+        <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+        <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
       </div>
     </div>
+    <a class="fluid ui black button big" href="{{ root }}/signup.html">
+      <i class="sign in icon"></i>
+      Rejoindre le Remosco
+    </a>
   </div>
 
 
   <!-- Page Contents -->
   <div class="pusher">
     {% if page.title == "Actualités" %}
-    <div class="ui inverted vertical masthead center aligned segment hidden" data-slides='["{{ root }}/assets/images/splash.png","{{ root }}/assets/images/splash1.jpeg","{{ root }}/assets/images/splash2.jpg"]'>
+    <div class="ui inverted vertical masthead center aligned segment" data-slides='["{{ root }}/assets/images/splash.png","{{ root }}/assets/images/splash1.jpeg","{{ root }}/assets/images/splash2.jpg"]'>
       <!-- image preload -->
       <div hidden>
         <img class="ui image fluid" src="{{ root }}/assets/images/splash.png">
@@ -111,32 +135,37 @@
             <a class="toc item">
               <i class="sidebar icon"></i>
             </a>
+            <div class="header toc item">
+              <a href="{{ root }}" class="ui image fluid">
+                <img src="{{ root }}/assets/images/logo.png" alt="">
+              </a>
+            </div>
             <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
-            <div {% if page.pill == 1 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
+            <div {% if page.pill == 1 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
               Notre projet <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item" href="{{ root }}/activities.html">Activités</a>
-                <a class="item" href="{{ root }}/events.html">Actions soutenues</a>
-                <a class="item" href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+                <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
+                <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
+                <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
               </div>
             </div>
             <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
-            <div {% if page.pill == 3 %} class="ui simple dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
+            <div {% if page.pill == 3 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
               Serge Moscovici <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item" href="{{ root }}/background.html">Son parcours</a>
-                <a class="item" href="{{ root }}/videos.html">Ses vidéos</a>
-                <a class="item" href="{{ root }}/bibliography.html">Sa bibliographie</a>
-                <a class="item" href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-                <a class="item" href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+                <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
+                <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
+                <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
+                <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
+                <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
               </div>
             </div>
             <div class="right item">
-              <div class="ui simple dropdown inverted button">
+              <div class="ui dropdown inverted button">
                 EASP 2016<i class="dropdown icon"></i>
-                <div class="menu">
-                  <a class="item" href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-                  <a class="item" href="{{ root }}/EASP-members.html">Participants</a>
+                <div class="menu" style="right: 0;left: auto;">
+                  <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
+                  <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
                 </div>
               </div>
             </div>
@@ -144,7 +173,7 @@
         </div>
       </div>
       <div class="ui text container logo-container transition hidden large screen only">
-        <object class="hidden" id="logo" type="image/svg+xml" data="{{ root }}/assets/images/logo.svg" style="visibility:hidden;"></object>
+        <object class="hidden" id="logo" type="image/svg+xml" data="{{ root }}/assets/images/logo.svg" style="visibility:hidden;"  onerror="this.data='{{ root }}/assets/images/logo.png'"></object>
         <h2 class="hidden subtitle">Réseau Mondial Serge Moscovici</h2>
       </div>
     </div>
@@ -194,7 +223,7 @@
     </div>
     <div class="image content">
       <div class="ui medium image">
-        <img src="{{ root }}/assets/images/neatastic.svg" onerror="this.src='{{ root }}/assets/images/neatastic.svg'">
+        <img src="{{ root }}/assets/images/neatastic.svg" onerror="this.src='{{ root }}/assets/images/neatastic.png'">
       </div>
       <div class="description">
         <div class="ui header">This website "<a target="_blank" href="http://www.remosco.org">REMOSCO</a>" designed and coded by <a target="_blank" href="http://www.neatastic.com">Neatastic</a> is licensed under CC BY 2.0</div>
@@ -212,50 +241,71 @@
     </div>
     <div class="content">
       <form class="ui form segment" action="https://formspree.io/cordelois.antoine+remosco@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nouveau message du site REMOSCO (formulaire de contact)" />
-        <input type="text" name="_gotcha" style="display:none" />
-        <div class="two fields">
-          <div class="field">
-            <label>Nom</label>
-            <input name="name" placeholder="Votre nom" type="text">
+        <div class="content">
+          <input type="hidden" name="_subject" value="Nouveau message du site REMOSCO (formulaire de contact)" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <div class="two fields">
+            <div class="field">
+              <label>Nom</label>
+              <input name="name" placeholder="Votre nom" type="text">
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input name="email" type="email" placeholder="Exemple: Serge.Moscovici@gmail.com">
+            </div>
           </div>
-          <div class="field">
-            <label>Email</label>
-            <input name="email" type="email" placeholder="Exemple: Serge.Moscovici@gmail.com">
-          </div>
-        </div>
           <div class="field">
             <label>Message</label>
             <textarea name="message" placeholder="Écrivez votre message ici"></textarea>
           </div>
-          <div class="ui primary submit button"><i class="send icon"></i>Envoyer</div>
+          <div class="ui success message">
+            <div class="header">Form Completed</div>
+            <p>You're all signed up for the newsletter.</p>
+          </div>
           <div class="ui error message"></div>
-        </form>
+        </div>
+        <div class="actions">
+          <div class="ui primary submit button"><i class="send icon"></i>Envoyer</div>
+        </div>
+      </form>
 
     </div>
   </div>
-  {% if page.pill == 2 %}
-  <script type="text/javascript">
-  (function() {
-    var st = document.createElement('script');
-    st.type = 'text/javascript';
-    st.async = true;
-    st.src = 'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(st, s);
-  })();
-  </script>
-  {% endif %}
-  <script src='{{ root }}/assets/js/nprogress.js'></script>
-  <script src="{{ root }}/assets/js/vivus.min.js"></script>
-  <script src="{{ root }}/assets/js/layout.js" charset="utf-8"></script>
-  {% if page.pill == 0 %}
-  <script src="{{ root }}/assets/js/slider.min.js"></script>
-  <script src="{{ root }}/assets/js/home.js" charset="utf-8"></script>
-  {% endif %}
-  {% if page.pill == 4 %}
-  <script src="{{ root }}/assets/js/easp.js"></script>
-  {% endif %}
+  <div class="ui modal" id="thankyou">
+    <i class="close icon"></i>
+    <div class="header">    Merci pour votre message / Thank you for your message
+    </div>
+    <div class="content">
+      Votre message a bien été envoyé.
+    </div>
+    <div class="actions">
+      <div class="ui cancel button" onclick="$('#contact').modal('show')"><i class="repeat icon"></i>Envoyer un autre mesage</div>
+      <div class="ui positive approve button" onclick="$('#thankyou').modal('hide')"><i class="checkmark icon"></i>Ok</div>
+    </div>
+  </div>
+</div>
+{% if page.pill == 2 %}
+<script type="text/javascript">
+(function() {
+  var st = document.createElement('script');
+  st.type = 'text/javascript';
+  st.async = true;
+  st.src = 'https://www.researchgate.net/javascript/plugin/plugin-api-min.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(st, s);
+})();
+</script>
+{% endif %}
+<script src='{{ root }}/assets/js/nprogress.js'></script>
+<script src="{{ root }}/assets/js/vivus.min.js"></script>
+<script src="{{ root }}/assets/js/layout.js" charset="utf-8"></script>
+{% if page.pill == 0 %}
+<script src="{{ root }}/assets/js/slider.min.js"></script>
+<script src="{{ root }}/assets/js/home.js" charset="utf-8"></script>
+{% endif %}
+{% if page.pill == 4 %}
+<script src="{{ root }}/assets/js/easp.js"></script>
+{% endif %}
 </body>
 
 </html>

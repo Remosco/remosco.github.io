@@ -1,10 +1,10 @@
 ---
 layout: default
-title: EASP 2016 - Programme et vidéos
+title: Small meeting EASP 2016 - Programme et vidéos
 pill: 4
+subpill: 0
 ---
 {% assign first_day_conferences = (site.EASP | where: 'section' , "1" | sort: 'date') %}
-{% assign first_day_speakers = (first_day_conferences | where: 'people' , "1" | sort: 'date') %}
 {% assign second_day_conferences = (site.EASP | where: 'section' , "2" | sort: 'date') %}
 {% assign public_conferences = (site.EASP | where: 'section' , "3" | sort: 'date') %}
 <div class="ui vertical stripe segment">
@@ -16,13 +16,14 @@ pill: 4
 
 
           <div class="ui secondary vertical menu fluid">
-            <div class="ui dropdown item">
+            <div class="ui dropdown item"  id="author_filter">
               <input name="filters" type="hidden">
               <span class="text">
                 <i class="search icon"></i>
                 Recherche par intervenant</span>
                 <div class="menu " style="z-index:3;">
                   <div class="header">
+                    <i class="search icon"></i>
                     Recherche par intervenant
                   </div>
 
@@ -66,6 +67,10 @@ pill: 4
                   <i class="search icon"></i>
                   Recherche par titre</span>
                   <div class="menu " id="title_filter_menu">
+                    <div class="header">
+                      <i class="search icon"></i>
+                      Recherche par titre
+                    </div>
                     <div class="ui icon search input">
                       <i class="search icon"></i>
                       <input placeholder="Nom de l'auteur" type="text">
@@ -78,79 +83,85 @@ pill: 4
                     <div class="menu scrolling">
                       {% for event in first_day_conferences %}
                       {% include event_shortcut.html mode='header' %}
-                        {% endfor %}
-                      </div>
-                      <div class="header">
-                        <i class="calendar icon"></i>
-                        Mardi 18 Novembre 2016
-                      </div>
-                      <div class="menu scrolling">
-                        {% for event in second_day_conferences %}
-                        {% include event_shortcut.html mode='header' %}
-
-                          {% endfor %}
-                        </div>
-                        <div class="header">
-                          <i class="calendar icon"></i>
-                          Mardi 18 Novembre 2016 (Session publique)
-                        </div>
-                        <div class="menu scrolling">
-                          {% for event in public_conferences %}
-                          {% include event_shortcut.html mode='header' %}
-                            {% endfor %}
-                          </div>
-                        </div>
-                      </div>
+                      {% endfor %}
                     </div>
+                    <div class="header">
+                      <i class="calendar icon"></i>
+                      Mardi 18 Novembre 2016
+                    </div>
+                    <div class="menu scrolling">
+                      {% for event in second_day_conferences %}
+                      {% include event_shortcut.html mode='header' %}
 
-                  </div>
-                </div>
-                <div class="twelve wide column"  id="main">
-                  <div class="ui text container">
-                    <h1 class="ui header">
-                      EASP 2016 - Programme et vidéos
-                      <div class="sub header">La version pdf du programme de l'EASP 2016 est <a href="http://greps.univ-lyon2.fr/medias/fichier/iea-programme-tributemoscovici-diffsite_1477550705609-pdf" target="_blank">disponible ici</a>.</div>
-                    </h1>
-                    <div id="container">
-                      <h2 class="ui grey center aligned icon header">
-                        <i class="circular calendar icon"></i>
-                        Jeudi 11 Novembre 2016
-                      </h2>
-
-                      <div class="ui large feed">
-                        {% for event in first_day_conferences %}
-                        {% include EASP_event.html %}
-                        {% endfor %}
-                      </div>
-                      <h2 class="ui grey center aligned icon header">
-                        <i class="circular calendar icon"></i>
-                        Vendredi 18 Novembre 2016
-                      </h2>
-
-                      <div class="ui large feed">
-                        {% for event in second_day_conferences %}
-                        {% include EASP_event.html %}
-                        {% endfor %}
-                      </div>
-                      <h2 class="ui center aligned icon header">
-                        <i class="circular comments outline icon grey"></i>
-                        Future directions for a societal psychology
-                        <div class="sub header">Public session</div>
-                      </h2>
-                      <div class="ui divider"></div>
-                      <div class="ui large feed">
-                        {% for event in public_conferences %}
-                        {% include EASP_event.html %}
-                        {% endfor %}
-                      </div>
+                      {% endfor %}
+                    </div>
+                    <div class="header">
+                      <i class="calendar icon"></i>
+                      Mardi 18 Novembre 2016 (Session publique)
+                    </div>
+                    <div class="menu scrolling">
+                      {% for event in public_conferences %}
+                      {% include event_shortcut.html mode='header' %}
+                      {% endfor %}
                     </div>
                   </div>
-
                 </div>
-
-                <!-- Pagination links -->
               </div>
-
-
+              <div class="ui divider"></div>
+              <a class="fluid ui black button big" href="{{ root }}/signup.html">
+                <i class="sign in icon"></i>
+                Rejoindre le Remosco
+              </a>
             </div>
           </div>
+          <div class="twelve wide column"  id="main">
+            <div class="ui text container">
+              <div class="ui breadcrumb">
+                <div class="section">Small meeting EASP 2016</div>
+                <i class="right angle icon divider"></i>
+                <a href="{{ root }}/Participants.html" class="section">Programme et vidéos</a>
+              </div>
+              <h1 class="ui header">
+                Small meeting EASP 2016 - Programme et vidéos
+                <div class="sub header">La version pdf du programme de l'EASP 2016 est <a href="http://greps.univ-lyon2.fr/medias/fichier/iea-programme-tributemoscovici-diffsite_1477550705609-pdf" target="_blank">disponible ici</a>.</div>
+              </h1>
+              <p><i>Le Small Meeting EASP s'est déroulé les 17 et 18 Novembre 2016.</i></p>
+              <p><i>Il a été tenu en l'honneur de Serge Moscovici (1925-2014) et ses contributions aux sciences sociales en général et à la psychologie sociale en particulier.</i></p>
+              <h2 class="ui grey center aligned icon header">
+                <i class="circular calendar icon"></i>
+                Jeudi 17 Novembre 2016
+              </h2>
+
+              <div class="ui large feed">
+                {% for event in first_day_conferences %}
+                {% include EASP_event.html %}
+                {% endfor %}
+              </div>
+              <h2 class="ui grey center aligned icon header">
+                <i class="circular calendar icon"></i>
+                Vendredi 18 Novembre 2016
+              </h2>
+
+              <div class="ui large feed">
+                {% for event in second_day_conferences %}
+                {% include EASP_event.html %}
+                {% endfor %}
+              </div>
+              <h2 class="ui center aligned icon header">
+                <i class="circular comments outline icon grey"></i>
+                Future directions for a societal psychology
+                <div class="sub header">Public session</div>
+              </h2>
+              <div class="ui divider"></div>
+              <div class="ui large feed">
+                {% for event in public_conferences %}
+                {% include EASP_event.html %}
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+          <!-- Pagination links -->
+        </div>
+      </div>
+    </div>

@@ -8,8 +8,6 @@ collections:
   - members
   - EASP
 lang: fr
-feed:
-  title: header
 sass:
   sass_dir: assets/_sass
   style: compressed
@@ -21,3 +19,14 @@ gems:
   - jekyll-sitemap
   - jekyll-seo-tag
 production_url : http://remosco.com
+compress_html:
+  clippings: [div, p, ul, td, h1, h2]
+  comments: ["<!-- ", " -->"]
+  endings: [p, li, td]
+  ignore:
+    envs: []  # disable compression in dev environment
+page_gen:
+  - data: members
+    template: member.html
+    name: lastname
+    dir: members

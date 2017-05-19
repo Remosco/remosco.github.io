@@ -79,7 +79,7 @@ a.anchor
 }
 
 .ui.vertical.stripe {
-  padding: 8em 0em;
+  padding: 6em 0em;
 }
 
 .ui.vertical.stripe .post:not(:first-child) h2{
@@ -114,11 +114,8 @@ a.anchor
   padding: 5em 0em;
 }
 
-.secondary.pointing.menu .toc.item {
-  display: none;
-}
 .menu-container {
-  background-color: rgba(0,0,0,.85);
+  background-color: #1B1C1D;
 }
 .ui.secondary.inverted.menu a.item{
   color:rgba(255, 255, 255, 0.9)!important;
@@ -161,28 +158,26 @@ border-color: #fff;
 .pages {
   text-align: center;
 }
+
+.secondary.pointing.menu .toc.item ,.fixed.top.menu .toc.item {
+  display: none;
+}
 /* additional CSS for hidden image preload section */
 [hidden] { display: none; }
 @media only screen and (max-width: 700px) {
-  .ui.fixed.menu {
-    display: none !important;
+  .secondary.pointing.menu .item ,
+  .secondary.pointing.menu .menu,
+  .top.fixed.menu .item:not(.toc) {
+    display: none!important;
   }
-  .secondary.pointing.menu .item,
-  .secondary.pointing.menu .menu {
-    display: none;
+  .top.fixed.menu {
+    display: flex;
   }
-  .secondary.pointing.menu .toc.item {
-    display: block;
+  .toc.item {
+    display: block!important;
   }
   .masthead.segment {
-    min-height: 350px;
-  }
-  .masthead .logo img{
-    font-size: 2em;
-    margin-top: 1.5em;
-  }
-  .masthead h2 {
-    font-size: 1.5em;
+    display: none!important;
   }
 
 }

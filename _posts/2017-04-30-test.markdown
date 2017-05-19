@@ -5,6 +5,6 @@ tags:
   - Video
   - EASP 2016
 ---
-Afin de valoriser le [meeting EASP 2016](http://github.com), le REMOSCO a décidé de revoir l'intégralité de son site web. Désormais, en plus d'un accès simple aux [ressources](http://github.com), vous pourrez suivre les actualités du réseau et les évènements qu'il soutient.
+Afin de valoriser le [meeting EASP 2016](http://greps.univ-lyon2.fr/easp-small-group-meeting-in-honor-of-serge-moscovici-660026.kjsp), le REMOSCO a décidé de revoir l'intégralité de son site web. Désormais, en plus d'un accès simple aux [vidéos]({{ root }}/videos.html) et aux [évènements soutenus par le Remosco]({{ root }}/videos.html)  , vous pourrez suivre les actualités du réseau sur cette page, ou à l'aide du [flux RSS]({{ root }}/feed.xml).
 
-Le meeting EASP 2016 a lui aussi sa [section dédiée](http://github.com). Vous pourrez y trouver les [actes](http://github.com), [fiches des participants](http://github.com) (bientôt disponibles) ainsi que les [publications associées](http://github.com).
+Le Small Meeting EASP 2016 a lui aussi sa section dédiée. Vous pourrez y trouver les [videos et le programme]({{ root }}/EASP-videos.html) ainsi que les [fiches des participants]({{ root }}/EASP-Members.html) et leurs publications associées (bientôt disponibles).

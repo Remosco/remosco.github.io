@@ -39,7 +39,13 @@ a.anchor
 .hidden.menu {
   display: none;
 }
+/*
+body { margin: 30px; }
+/* Add some margin to the body to add space and
+see where your offending elements cross the line
 
+body * { border: 1px solid red; }
+ add a border to all other elements on the page */
 .masthead.segment {
   min-height: 185px;
   height:50%;

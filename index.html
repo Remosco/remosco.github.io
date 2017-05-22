@@ -5,49 +5,46 @@ pill: 0
 ---
 
 <div class="ui vertical stripe segment">
-  <div class="ui middle aligned stackable grid container">
-    <div class="row">
-      <div class="twelve wide column"  id="main">
-        <div class="ui text container">
-
-          {% for post in paginator.posts %}
-            {% include post.html %}
-          {% endfor %}
-        </div>
-
-        {% if paginator.total_pages > 1 %}
-        <div class="row pages">
-          <div class="centered column container">
-            <div class="ui pagination menu">
-              {% if paginator.previous_page and paginator.previous_page > 1 %}
-              <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
-              {% else %}
-              {% endif %}
-
-              {% for page in (1..paginator.total_pages) %}
-              {% if page == paginator.page %}
-              <a class="active item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-              {% elsif page == 1 %}
-              <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-              {% else %}
-              <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-              {% endif %}
+        <div class="ui stackable grid container">
+          <div class="row">
+            <div class="twelve wide column" id="main">
+              {% for post in paginator.posts %}
+                {% include post.html %}
               {% endfor %}
+              {% if paginator.total_pages > 1 %}
+                <div class="centered column container">
+                  <div class="ui pagination menu">
+                    {% if paginator.previous_page and paginator.previous_page > 1 %}
+                    <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+                    {% else %}
+                    {% endif %}
 
-              {% if paginator.next_page and paginator.next_page < paginator.total_pages %}
-              <a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
-              {% else %}
+                    {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                    <a class="active item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    {% elsif page == 1 %}
+                    <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                    {% else %}
+                    <a class="item" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if paginator.next_page and paginator.next_page < paginator.total_pages %}
+                    <a class="item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+                    {% else %}
+                    {% endif %}
+                  </div>
+                </div>
               {% endif %}
             </div>
+
+            {% include rail.html %}
+
+
+                  <!-- Pagination links -->
           </div>
-        </div>
-        {% endif %}
-    </div>
 
-      {% include rail.html %}
-      <!-- Pagination links -->
     </div>
 
 
-  </div>
 </div>

@@ -29,21 +29,21 @@
     {% for tag in post.tags %}
     {% case tag %}
     {% when "News" %}
-    <a class="ui tag label">Actualités</a>
+    <a href="{{ root }}" class="ui tag label">Actualités</a>
     {% when "Video" %}
-    <a class="ui blue tag label uh">Vidéos</a>
+    <a href="{{ root }}/videos.html" class="ui blue tag label uh">Vidéos</a>
     {% when "EASP 2016" %}
-    <a class="ui yellow tag label">EASP 2016</a>
+    <a href="{{ root }}/EASP-videos.html" class="ui yellow tag label">EASP 2016</a>
     {% when "Event" %}
-    <a class="ui orange tag label">Evènement</a>
+    <a href="{{ root }}/events.html" class="ui orange tag label">Evènement</a>
     {% when "French" %}
-    <a class="ui tag label"><i class="france flag"></i>Français</a>
+    <div class="ui tag label"><i class="france flag"></i>Français</div>
     {% when "Spanish" %}
-    <a class="ui tag label"><i class="spain flag"></i>Espagnol</a>
+    <div class="ui tag label"><i class="spain flag"></i>Espagnol</div>
     {% when "English" %}
-    <a class="ui tag label"><i class="gb flag"></i>Anglais</a>
+    <div class="ui tag label"><i class="gb flag"></i>Anglais</div>
     {% when "US" %}
-    <a class="ui tag label"><i class="america flag"></i>Américain</a>
+    <div class="ui tag label"><i class="america flag"></i>Américain</div>
     {% else %}
     {% endcase %}
     {% endfor %}

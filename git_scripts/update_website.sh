@@ -1,7 +1,8 @@
-cd /home/bob/website
-
+cd ..
 git add .
-
+echo "----------------------------------"
+echo "Mise à jour du site REMOSCO"
+echo "----------------------------------"
 echo 'Entrez le nom de la mise à jour:'
 read commitMessage
 

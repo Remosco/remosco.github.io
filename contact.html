@@ -1,0 +1,66 @@
+---
+layout: default
+title: Contact
+pill: 10
+subpill: 10
+---
+
+<div class="ui vertical stripe segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="twelve wide column"  id="main">
+        <div class="ui text container">
+          <h1 class="ui header">Contactez nous</h1>
+          <div class="ui divider"></div>
+          <h2 class="ui header">Par email à <i>"Contact ~at~ Remosco.net"</i></h1>
+            <div class="ui horizontal divider"> ou</div>
+            <h2 class="ui header">Via notre formulaire</h1>
+
+          <form class="ui form segment" action="https://formspree.io/contact@remosco.net" method="POST">
+            <div class="content">
+              <input type="hidden" name="_subject" value="Nouveau message du site REMOSCO (formulaire de contact)" />
+              <input type="text" name="_gotcha" style="display:none" />
+              <div class="two fields">
+                <div class="field">
+                  <label>Nom</label>
+                  <input name="name" placeholder="Votre nom" type="text">
+                </div>
+                <div class="field">
+                  <label>Email</label>
+                  <input name="email" type="email" placeholder="Exemple: Serge.Moscovici@gmail.com">
+                </div>
+              </div>
+              <div class="field">
+                <label>Message</label>
+                <textarea name="message" placeholder="Écrivez votre message ici"></textarea>
+              </div>
+              <div class="ui success message">
+                <div class="header">Message envoyé.</div>
+                <p>Nous vous répondrons dès que possible.</p>
+              </div>
+              <div class="ui error message"></div>
+            </div>
+            <div class="actions">
+              <div class="ui primary submit button"><i class="send icon"></i>Envoyer</div>
+            </div>
+          </form>
+            </div>
+      </div>
+      {% include rail.html %}
+      <!-- Pagination links -->
+    </div>
+
+    <div class="ui modal" id="thankyou">
+      <i class="close icon"></i>
+      <div class="header">    Merci pour votre message / Thank you for your message
+      </div>
+      <div class="content">
+        Votre message a bien été envoyé.
+      </div>
+      <div class="actions">
+        <div class="ui cancel button" onclick="$('#contact').modal('show')"><i class="repeat icon"></i>Envoyer un autre mesage</div>
+        <div class="ui positive approve button" onclick="$('#thankyou').modal('hide')"><i class="checkmark icon"></i>Ok</div>
+      </div>
+    </div>
+  </div>
+</div>

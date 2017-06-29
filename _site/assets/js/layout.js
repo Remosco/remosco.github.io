@@ -77,28 +77,7 @@ $(document)
       }
     }
   })
+  })
 
-  $('#contact .submit.button')
-  .api({
-    url: 'https://formspree.io/cordelois.antoine+remosco@gmail.com',
-    method : 'POST',
-    serializeForm: true,
-    beforeSend: function(settings) {
-      console.log($('#contact form').form('is valid'));
-      if (!$('#contact form').form('is valid')) {
-        console.log("invalid form, let's  ancel");
-        return false
-      } else {
-        return settings
-      }
-    },
-    onSuccess: function(data) {
-      console.log("form success with ");
-      console.log(data);
-      $('#contact form').addClass('success')
 
-    }
-
-  });
-})
 ;

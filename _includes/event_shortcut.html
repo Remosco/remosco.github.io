@@ -1,7 +1,7 @@
 {% if include.mode == 'author' %}
-<a class="item" href="#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
+<a class="item" href="/EASP-videos.html#{{ event.title }}" data-text="{% for speaker in event.people %}{{ speaker.name }} {% endfor %}">
   {% else %}
-  <a class="item" href="#{{ event.title }}" data-text="{{ event.title }}">
+  <a class="item" href="/EASP-videos.html#{{ event.title }}" data-text="{{ event.title }}">
     {% endif %}
     <img class="ui circular image" src="http://img.youtube.com/vi/{{ event.video }}/default.jpg">
     <span class="description">  {% for people in event.people %}

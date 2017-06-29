@@ -14,18 +14,170 @@ subpill: 1
     <div class="row">
       <div class="four wide column ui rail large screen only">
         <div class="ui sticky">
+          <h2>Accès rapide aux vidéos</h2>
 
 
+          <div class="ui secondary vertical menu fluid">
+            <div class="ui dropdown item"  id="author_filter">
+              <input name="filters" type="hidden">
+              <span class="text">
+                <i class="search icon"></i>
+                Recherche par intervenant</span>
+                <div class="menu " style="z-index:3;">
+                  <div class="header">
+                    <i class="search icon"></i>
+                    Recherche par intervenant
+                  </div>
+
+                  <div class="ui icon search input">
+                    <i class="search icon"></i>
+                    <input placeholder="Nom de l'intervenant" type="text">
+                  </div>
+                  <div class="divider"></div>
+                  <div class="header">
+                    <i class="calendar icon"></i>
+                    Lundi 17 Novembre 2016
+                  </div>
+                  <div class="menu scrolling" >
+                    {% for event in first_day_conferences %}
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
+                  </div>
+                  <div class="header">
+                    <i class="calendar icon"></i>
+                    Mardi 18 Novembre 2016
+                  </div>
+                  <div class="menu scrolling">
+                    {% for event in second_day_conferences %}
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
+                  </div>
+                  <div class="header">
+                    <i class="calendar icon"></i>
+                    Mardi 18 Novembre 2016 (Session publique)
+                  </div>
+                  <div class="menu scrolling">
+                    {% for event in public_conferences %}
+                    {% include event_shortcut.html mode='author' %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="ui dropdown item" id="title_filter">
+                <input name="filters" type="hidden">
+                <span class="text">
+                  <i class="search icon"></i>
+                  Recherche par titre</span>
+                  <div class="menu " id="title_filter_menu">
+                    <div class="header">
+                      <i class="search icon"></i>
+                      Recherche par titre
+                    </div>
+                    <div class="ui icon search input">
+                      <i class="search icon"></i>
+                      <input placeholder="Nom de l'auteur" type="text">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="header">
+                      <i class="calendar icon"></i>
+                      Lundi 17 Novembre 2016
+                    </div>
+                    <div class="menu scrolling">
+                      {% for event in first_day_conferences %}
+                      {% include event_shortcut.html mode='header' %}
+                      {% endfor %}
+                    </div>
+                    <div class="header">
+                      <i class="calendar icon"></i>
+                      Mardi 18 Novembre 2016
+                    </div>
+                    <div class="menu scrolling">
+                      {% for event in second_day_conferences %}
+                      {% include event_shortcut.html mode='header' %}
+
+                      {% endfor %}
+                    </div>
+                    <div class="header">
+                      <i class="calendar icon"></i>
+                      Mardi 18 Novembre 2016 (Session publique)
+                    </div>
+                    <div class="menu scrolling">
+                      {% for event in public_conferences %}
+                      {% include event_shortcut.html mode='header' %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui divider"></div>
+              <a class="fluid ui black button big" href="{{ root }}/signup.html">
+                <i class="sign in icon"></i>
+                Rejoindre le Remosco
+              </a>
+            </div>
           </div>
-        </div>
         <div class="twelve wide column"  id="main">
           <div class="ui text container">
-            <h1 class="ui header">
-              EASP 2016 - Participants
-            </h1>
-            <div id="container">
-
+            <div class="ui breadcrumb">
+              <div class="section">Small meeting EASP 2016</div>
+              <i class="right angle icon divider"></i>
+              <a href="{{ root }}/EASP-members.html" class="section">Participants</a>
             </div>
+            <h1 class="ui header">
+              Small meeting EASP 2016 - Participants
+              <div class="sub header">La version pdf du programme de l'EASP 2016 est <a href="http://greps.univ-lyon2.fr/medias/fichier/iea-programme-tributemoscovici-diffsite_1477550705609-pdf" target="_blank">disponible ici</a>.</div>
+            </h1>
+            <p><i>Le Small Meeting EASP s'est déroulé les 17 et 18 Novembre 2016.</i></p>
+            <p><i>Il a été tenu en l'honneur de Serge Moscovici (1925-2014) et ses contributions aux sciences sociales en général et à la psychologie sociale en particulier.</i></p>
+<div class="ui divider"></div>
+<p>Voici la liste des participants ainsi que leurs fiches, par ordre alphabétique.</p>
+{% assign easp_and_member = "" | split: "" %}
+{% for member in site.data.members  %}
+  {% if member.easp_speaker %}
+  {% assign easp_and_member = easp_and_member | push: member %}
+  {% endif %}
+{% endfor %}
+{% assign easp_and_member = easp_and_member | sort : 'lastname'  %}
+{% assign full_speaker_list = ""  | split: "" %}
+{% assign member_loop_index = 0 %}
+{% assign sorted_easp = site.data.easp | sort : 'lastname'  %}
+{% for speaker in sorted_easp %}
+{% assign  easp_and_member_size =  easp_and_member.size | minus: 1 %}
+{% if member_loop_index > easp_and_member_size %}
+{% assign full_speaker_list = full_speaker_list  | push: speaker %}
+{% else %}
+{% for member in easp_and_member %}
+{% assign compare = speaker.lastname  | append: "|"  | append: easp_and_member[member_loop_index].lastname %}
+{% assign compare = compare | split: "|" | sort %}
+{% if compare[0] == speaker.lastname %}
+{% assign full_speaker_list = full_speaker_list  | push: speaker %}
+{% break %}
+{% else %}
+{% assign full_speaker_list = full_speaker_list  | push: member %}
+{% assign member_loop_index = member_loop_index | plus : 1 %}
+{% endif %}
+{% endfor %}
+{% if member_loop_index > easp_and_member_size %}
+{% assign full_speaker_list = full_speaker_list  | push: speaker %}
+{% endif %}
+{% endif %}
+
+{% endfor %}
+{% for i in (member_loop_index..easp_and_member.size) %}
+{% assign full_speaker_list = full_speaker_list  | push: easp_and_member[i] %}
+{% endfor %}
+<ul>
+
+{% for member in full_speaker_list %}
+{% assign key = member.firstname | append: '-' | append: member.lastname %}
+
+<li>
+    <a onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
+</li>
+{% include member.html %}
+{% endfor %}
+</ul>
+
           </div>
 
         </div>

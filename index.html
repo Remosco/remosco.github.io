@@ -12,7 +12,7 @@ pill: 0
                 {% include post.html %}
               {% endfor %}
               {% if paginator.total_pages > 1 %}
-                <div class="centered column container">
+                <div class="centered column container paginator">
                   <div class="ui pagination menu">
                     {% if paginator.previous_page and paginator.previous_page > 1 %}
                     <a class="item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>

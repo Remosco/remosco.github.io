@@ -30,6 +30,12 @@ transform: rotate(3deg) translate(0px, -4px);
 }
 body {
   min-width: 320px;
+  min-height: 100%;
+}
+.pusher {
+  display: flex;
+flex-direction: column;
+
 }
 a.anchor
 {
@@ -89,7 +95,15 @@ body * { border: 1px solid red; }
 .ui.vertical.stripe {
   padding: 6em 0em;
 }
-
+.ui.vertical.stripe.segment {
+  flex:1;
+}
+.ui.vertical.stripe.segment form .actions {
+  text-align: right;
+}
+.paginator {
+  text-align: center;
+}
 .ui.vertical.stripe .post:not(:first-child) h2{
   padding-top: 0.5em;
   padding-bottom: 0.2em;
@@ -117,13 +131,15 @@ body * { border: 1px solid red; }
   padding-top: 5em;
   padding-bottom: 5em;
 }
-
+.footer {
+  background-color: #1b1c1d!important;
+}
 .footer.segment {
   padding: 5em 0em;
 }
 
 .menu-container {
-  background-color: #1B1C1D;
+  background-color: #1b1c1d;
 }
 .ui.secondary.inverted.menu a.item{
   color:rgba(255, 255, 255, 0.9)!important;

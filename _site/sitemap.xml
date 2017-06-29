@@ -58,6 +58,9 @@
 <loc>http://localhost:4000/community.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/contact.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/events.html</loc>
 </url>
 <url>
@@ -70,6 +73,9 @@
 <loc>http://localhost:4000/network.html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/models/post.html</loc>
+</url>
+<url>
 <loc>http://localhost:4000/signup.html</loc>
 </url>
 <url>
@@ -77,15 +83,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/videos.html</loc>
-</url>
-<url>
-<loc>http://localhost:4000/semantic/tasks/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/semantic/tasks/collections/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/semantic/tasks/config/admin/templates/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/2/</loc>

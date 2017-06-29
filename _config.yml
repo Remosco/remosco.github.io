@@ -18,15 +18,17 @@ gems:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-production_url : http://remosco.com
+production_url : http://www.remosco.net
 compress_html:
   clippings: [div, p, ul, td, h1, h2]
   comments: ["<!-- ", " -->"]
   endings: [p, li, td]
   ignore:
     envs: []  # disable compression in dev environment
-page_gen:
-  - data: members
-    template: member.html
-    name: lastname
-    dir: members
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - semantic/src
+  - semantic/tasks
+  - git_scripts

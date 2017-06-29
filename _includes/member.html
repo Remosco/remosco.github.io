@@ -1,7 +1,7 @@
 <div class="ui long modal" id="{{ key | slugify }}">
   <i class="close icon"></i>
   <div class="header">
-    [{{ member.role }}] {{ member.firstname }} {{ member.lastname }} - {{ member.employer }}, {{ member.country }}
+    [{{ include.member.role }}] {{ include.member.firstname }} {{ include.member.lastname }} - {{ include.member.employer }}, {{ include.member.country }}
   </div>
   <div class="content">
     <div class="description">
@@ -9,19 +9,19 @@
         <div class="column four wide">
           <h2 class="ui sub header">Liens</h2>
           <ul>
-            {% if member.website %}
+            {% if include.member.website %}
             <li>
-              <a href="{{ member.website }}" target="_blank">Page personnelle</a>
+              <a href="{{ include.member.website }}" target="_blank">Page personnelle</a>
             </li>
             {% endif %}
-            {% if member.zotero %}
-            <li><a href="{{ member.zotero }}" target="_blank">Zotero</a></li>
+            {% if include.member.zotero %}
+            <li><a href="{{ include.member.zotero }}" target="_blank">Zotero</a></li>
             {% endif %}
-            {% if member.academia %}
-            <li><a href="{{ member.academia }}" target="_blank">Academia.edu</a></li>
+            {% if include.member.academia %}
+            <li><a href="{{ include.member.academia }}" target="_blank">Academia.edu</a></li>
             {% endif %}
-            {% if member.mendeley %}
-            <li><a href="{{ member.mendeley }}" target="_blank">Mendeley</a></li>
+            {% if include.member.mendeley %}
+            <li><a href="{{ include.member.mendeley }}" target="_blank">Mendeley</a></li>
             {% endif %}
           </ul>
 
@@ -30,12 +30,12 @@
           <h2 class="ui sub header">
             Bibliographie
           </h2>
-          {% if  member.bibtex_url %}
-          <iframe src="https://bibbase.org/show?bib={{ member.bibtex_url }}" width="100%" height="800" border="0" ></iframe>
-          {% else if member.bibtex_file %}
-          <iframe src="https://bibbase.org/show?bib={{ member.bibtex_file }}" width="100%" height="800" border="0"  ></iframe>
-          {% else if member.raw_bibliography %}
-          {{ member.raw_bibliography }}
+          {% if  include.member.bibtex_url %}
+          <iframe src="https://bibbase.org/show?bib={{ include.member.bibtex_url }}" width="100%" height="800" border="0" ></iframe>
+          {% else if include.member.bibtex_file %}
+          <iframe src="https://bibbase.org/show?bib={{ include.member.bibtex_file }}" width="100%" height="800" border="0"  ></iframe>
+          {% else if include.member.raw_bibliography %}
+          {{ include.member.raw_bibliography }}
           {% endif %}
         </div>
       </div>

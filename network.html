@@ -3,10 +3,6 @@ layout: default
 title: Notre réseau
 pill: 2
 ---
-{% for member in site.data.members %}
-{% assign key = member.firstname | append: '-' | append: member.lastname %}
-{% include member.html %}
-{% endfor %}
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">
     <div class="row">
@@ -30,6 +26,7 @@ pill: 2
             <li>
               <a href="#{{ key | slugify }}" onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
             </li>
+            {% include member.html member=member %}
             {% endfor %}
           </ul>
           <h2 class="ui header">Membres d’honneur</h2>
@@ -49,6 +46,7 @@ pill: 2
             <li>
               <b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}<br>
             </li>
+            {% include member.html member=member %}
             {% endfor %}
           </ul>
           <h3 class="ui header">Membres invités</h3>
@@ -58,6 +56,7 @@ pill: 2
             <li>
               <b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}<br>
             </li>
+            {% include member.html member=member %}
             {% endfor %}
           </ul>
         </div>

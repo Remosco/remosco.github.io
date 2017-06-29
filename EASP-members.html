@@ -174,7 +174,7 @@ subpill: 1
 <li>
     <a href="#{{ key | slugify }}" onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
 </li>
-{% include member.html %}
+{% include member.html member=member %}
 {% endfor %}
 </ul>
 

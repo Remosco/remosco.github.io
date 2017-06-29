@@ -243,6 +243,12 @@ layout: compress
 <script src='{{ root }}/assets/js/nprogress.js'></script>
 <script src="{{ root }}/assets/js/vivus.min.js"></script>
 <script src="{{ root }}/assets/js/layout.js" charset="utf-8"></script>
+{% if page.pill == 4 and page.subpill == 1 %}
+<script src='{{ root }}/assets/js/hash.js'></script>
+{% endif %}
+{% if page.pill == 2 %}
+<script src='{{ root }}/assets/js/hash.js'></script>
+{% endif %}
 {% if page.pill == 0 %}
 <script src="{{ root }}/assets/js/slider.min.js"></script>
 <script src="{{ root }}/assets/js/home.js" charset="utf-8"></script>

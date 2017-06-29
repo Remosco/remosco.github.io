@@ -172,7 +172,7 @@ subpill: 1
 {% assign key = member.firstname | append: '-' | append: member.lastname %}
 
 <li>
-    <a onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
+    <a href="#{{ key | slugify }}" onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
 </li>
 {% include member.html %}
 {% endfor %}

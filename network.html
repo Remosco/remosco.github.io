@@ -5,10 +5,7 @@ pill: 2
 ---
 {% for member in site.data.members %}
 {% assign key = member.firstname | append: '-' | append: member.lastname %}
-
-
 {% include member.html %}
-
 {% endfor %}
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">
@@ -31,7 +28,7 @@ pill: 2
             {% for member in steering_commitee %}
             {% assign key = member.firstname | append: '-' | append: member.lastname %}
             <li>
-              <a onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
+              <a href="#{{ key | slugify }}" onclick="$('#{{ key | slugify }}').modal('show')"><b>{{ member.firstname }} {{ member.lastname }}</b>, {{ member.title }} - {{ member.employer}}, {{ member.country }}</a>
             </li>
             {% endfor %}
           </ul>

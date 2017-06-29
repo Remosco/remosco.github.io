@@ -26,7 +26,6 @@ $(document)
   ;
   setTimeout(2000,
     function () {
-      console.log("refresh");
       $('.ui.sticky')
       .sticky('refresh')
       ;
@@ -36,8 +35,6 @@ $(document)
   .dropdown({
     on:'hover',
     action: function(text, value) {
-      console.log(text);
-      console.log(value);
       // nothing built in occurs
     }
   })

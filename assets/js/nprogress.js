@@ -119,7 +119,6 @@
    */
   NProgress.start = function() {
     if (!NProgress.status) NProgress.set(0);
-console.log("started");
     var work = function() {
       setTimeout(function() {
         if (!NProgress.status) return;
@@ -146,7 +145,6 @@ console.log("started");
    */
 
   NProgress.done = function(force) {
-    console.log("done");
     if (!force && !NProgress.status) return this;
 
     return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);

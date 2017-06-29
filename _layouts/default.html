@@ -9,14 +9,12 @@ layout: compress
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  {% assign root = "http://www.remosco.net" %}
-  <!--  {% assign root = "." %}-->
 
   <!-- Site Properties -->
   <title>REMOSCO - {{ page.title }}</title>
 
-  <link rel="stylesheet" type="text/css" href="{{ root }}/semantic/dist/semantic.min.css">
-  <link rel="stylesheet" type="text/css"  href="{{ root }}/assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.remosco.net/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css"  href="http://www.remosco.net/assets/css/main.css" />
 
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -32,7 +30,7 @@ layout: compress
     ga('send', 'pageview');
 
   </script>
-  <script src="{{ root }}/semantic/dist/semantic.min.js"></script>
+  <script src="http://www.remosco.net/semantic/dist/semantic.min.js"></script>
   {% seo %}
 </head>
 <body class="pushable">
@@ -47,41 +45,41 @@ layout: compress
           <i class="sidebar icon"></i>
         </a>
         <div class="header toc item">
-          <a href="{{ root }}" class="ui image fluid">
-            <img src="{{ root }}/assets/images/logo.png" alt="">
+          <a href="http://www.remosco.net" class="ui image fluid">
+            <img src="http://www.remosco.net/assets/images/logo.png" alt="">
           </a>
         </div>
         <div class="header item">
-          <a href="{{ root }}" class="ui image fluid">
-            <img src="{{ root }}/assets/images/logo.png" alt="">
+          <a href="http://www.remosco.net" class="ui image fluid">
+            <img src="http://www.remosco.net/assets/images/logo.png" alt="">
           </a>
         </div>
-        <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
+        <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/">Actualités</a>
         <div {% if page.pill == 1 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
           Notre projet <i class="dropdown icon"></i>
           <div class="menu">
-            <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
-            <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
-            <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+            <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/activities.html">Activités</a>
+            <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/events.html">Actions soutenues</a>
+            <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
           </div>
         </div>
-        <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
+        <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/network.html">Notre réseau</a>
         <div {% if page.pill == 3 %} class="ui dropdown item current" {% else %}class="ui simple dropdown item"{% endif %}>
           Serge Moscovici <i class="dropdown icon"></i>
           <div class="menu">
-            <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
-            <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
-            <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
-            <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-            <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+            <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/background.html">Son parcours</a>
+            <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/videos.html">Ses vidéos</a>
+            <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/bibliography.html">Sa bibliographie</a>
+            <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/tributes.html">Hommages à Serge Moscovici</a>
+            <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
           </div>
         </div>
         <div class="right item">
           <div class="ui dropdown inverted button">
             EASP 2016<i class="dropdown icon"></i>
             <div class="menu"  style="right: 0;left: auto;">
-              <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-              <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
+              <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-videos.html">Programme et vidéos</a>
+              <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-members.html">Participants</a>
             </div>
           </div>
         </div>
@@ -91,37 +89,37 @@ layout: compress
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
-    <a class="ui header item" href="{{ root }}/">
-      <img src="{{ root }}/assets/images/logo.png" alt="">
+    <a class="ui header item" href="http://www.remosco.net/">
+      <img src="http://www.remosco.net/assets/images/logo.png" alt="">
     </a>
-    <br>    <a {% if page.pill == 0 %} class=" header item active" {% else %}class=" header item"{% endif %} href="{{ root }}/">Actualités</a>
+    <br>    <a {% if page.pill == 0 %} class=" header item active" {% else %}class=" header item"{% endif %} href="http://www.remosco.net/">Actualités</a>
     <div {% if page.pill == 1 %} class="header item active" {% else %}class=" header item"{% endif %}>
       Notre projet
       <div class="menu">
-        <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
-        <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
-        <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+        <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/activities.html">Activités</a>
+        <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/events.html">Actions soutenues</a>
+        <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
       </div>
     </div>
-    <a {% if page.pill == 2 %} class=" header item active" {% else %}class=" header item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
+    <a {% if page.pill == 2 %} class=" header item active" {% else %}class=" header item"{% endif %} href="http://www.remosco.net/network.html">Notre réseau</a>
     <div {% if page.pill == 3 %} class=" header item active" {% else %}class=" header item"{% endif %}>
       Serge Moscovici
       <div class="menu">
-        <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
-        <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
-        <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
-        <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-        <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+        <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/background.html">Son parcours</a>
+        <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/videos.html">Ses vidéos</a>
+        <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/bibliography.html">Sa bibliographie</a>
+        <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/tributes.html">Hommages à Serge Moscovici</a>
+        <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
       </div>
     </div>
     <div {% if page.pill == 4 %} class=" item header active" {% else %}class=" header item"{% endif %}>
       Small meeting EASP 2016
       <div class="menu">
-        <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-        <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
+        <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-videos.html">Programme et vidéos</a>
+        <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-members.html">Participants</a>
       </div>
     </div>
-    <a class="fluid ui black button big" href="{{ root }}/signup.html">
+    <a class="fluid ui black button big" href="http://www.remosco.net/signup.html">
       <i class="sign in icon"></i>
       Rejoindre le Remosco
     </a>
@@ -131,12 +129,12 @@ layout: compress
   <!-- Page Contents -->
   <div class="pusher">
     {% if page.title == "Actualités" %}
-    <div class="ui inverted vertical masthead center aligned segment" data-slides='["{{ root }}/assets/images/splash.png","{{ root }}/assets/images/splash1.jpeg","{{ root }}/assets/images/splash2.jpg"]'>
+    <div class="ui inverted vertical masthead center aligned segment" data-slides='["http://www.remosco.net/assets/images/splash.png","http://www.remosco.net/assets/images/splash1.jpeg","http://www.remosco.net/assets/images/splash2.jpg"]'>
       <!-- image preload -->
       <div hidden>
-        <img class="ui image fluid" src="{{ root }}/assets/images/splash.png">
-        <img class="ui image fluid" src="{{ root }}/assets/images/splash1.jpeg">
-        <img class="ui image fluid" src="{{ root }}/assets/images/splash2.jpg">
+        <img class="ui image fluid" src="http://www.remosco.net/assets/images/splash.png">
+        <img class="ui image fluid" src="http://www.remosco.net/assets/images/splash1.jpeg">
+        <img class="ui image fluid" src="http://www.remosco.net/assets/images/splash2.jpg">
       </div> <!-- /.image preload -->
       <div class="row menu-container">
         <div class="ui container">
@@ -145,36 +143,36 @@ layout: compress
               <i class="sidebar icon"></i>
             </a>
             <div class="header toc item">
-              <a href="{{ root }}" class="ui image fluid">
-                <img src="{{ root }}/assets/images/logo.png" alt="">
+              <a href="http://www.remosco.net" class="ui image fluid">
+                <img src="http://www.remosco.net/assets/images/logo.png" alt="">
               </a>
             </div>
-            <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/">Actualités</a>
+            <a {% if page.pill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/">Actualités</a>
             <div {% if page.pill == 1 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
               Notre projet <i class="dropdown icon"></i>
               <div class="menu">
-                <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/activities.html">Activités</a>
-                <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/events.html">Actions soutenues</a>
-                <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
+                <a {% if page.pill == 1 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/activities.html">Activités</a>
+                <a {% if page.pill == 1 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/events.html">Actions soutenues</a>
+                <a {% if page.pill == 1 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/chair.html">Chaire Franco-Brésilienne Serge Moscovici</a>
               </div>
             </div>
-            <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/network.html">Notre réseau</a>
+            <a {% if page.pill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/network.html">Notre réseau</a>
             <div {% if page.pill == 3 %} class="ui dropdown item current" {% else %}class="ui dropdown item"{% endif %}>
               Serge Moscovici <i class="dropdown icon"></i>
               <div class="menu">
-                <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/background.html">Son parcours</a>
-                <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/videos.html">Ses vidéos</a>
-                <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/bibliography.html">Sa bibliographie</a>
-                <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/tributes.html">Hommages à Serge Moscovici</a>
-                <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="{{ root }}/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
+                <a {% if page.pill == 3 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/background.html">Son parcours</a>
+                <a {% if page.pill == 3 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/videos.html">Ses vidéos</a>
+                <a {% if page.pill == 3 and page.subpill == 2 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/bibliography.html">Sa bibliographie</a>
+                <a {% if page.pill == 3 and page.subpill == 3 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/tributes.html">Hommages à Serge Moscovici</a>
+                <a {% if page.pill == 3 and page.subpill == 4 %} class="item active" {% else %}class="item"{% endif %} href="http://www.remosco.net/in_memoriam.html">In Memoriam: Serge Moscovici (1925-2014)</a>
               </div>
             </div>
             <div class="right item">
               <div class="ui dropdown inverted button">
                 EASP 2016<i class="dropdown icon"></i>
                 <div class="menu" style="right: 0;left: auto;">
-                  <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-videos.html">Programme et vidéos</a>
-                  <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="{{ root }}/EASP-members.html">Participants</a>
+                  <a {% if page.pill == 4 and page.subpill == 0 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-videos.html">Programme et vidéos</a>
+                  <a {% if page.pill == 4 and page.subpill == 1 %} class="item active" {% else %}class="item"{% endif %}  href="http://www.remosco.net/EASP-members.html">Participants</a>
                 </div>
               </div>
             </div>
@@ -182,7 +180,7 @@ layout: compress
         </div>
       </div>
       <div class="ui text container logo-container transition hidden large screen only">
-        <object class="hidden" id="logo" type="image/svg+xml" data="{{ root }}/assets/images/logo.svg" style="visibility:hidden;"  onerror="this.data='{{ root }}/assets/images/logo.png'"></object>
+        <object class="hidden" id="logo" type="image/svg+xml" data="http://www.remosco.net/assets/images/logo.svg" style="visibility:hidden;"  onerror="this.data='http://www.remosco.net/assets/images/logo.png'"></object>
         <h2 class="hidden subtitle">Réseau Mondial Serge Moscovici</h2>
       </div>
     </div>
@@ -196,8 +194,8 @@ layout: compress
           <div class="four wide column">
             <h4 class="ui inverted header">A propos</h4>
             <div class="ui inverted link list">
-              <a href="{{ root }}/sitemap.xml" class="item">Carte du site</a>
-              <a href="{{ root }}/feed.xml" class="item">Flux RSS (Atom)</a>
+              <a href="http://www.remosco.net/sitemap.xml" class="item">Carte du site</a>
+              <a href="http://www.remosco.net/feed.xml" class="item">Flux RSS (Atom)</a>
               <a onclick="$('#credits').modal('show')" class="item">Crédits</a>
               <a href="/contact.html"  class="item">Nous contacter</a>
             </div>
@@ -227,7 +225,7 @@ layout: compress
     </div>
     <div class="image content">
       <div class="ui medium image">
-        <img src="{{ root }}/assets/images/neatastic.svg" onerror="this.src='{{ root }}/assets/images/neatastic.png'">
+        <img src="http://www.remosco.net/assets/images/neatastic.svg" onerror="this.src='http://www.remosco.net/assets/images/neatastic.png'">
       </div>
       <div class="description">
         <div class="ui header">This website "<a target="_blank" href="http://www.remosco.net">REMOSCO</a>" designed and coded by <a target="_blank" href="http://www.neatastic.com">Neatastic</a> is licensed under CC BY 2.0</div>
@@ -240,21 +238,21 @@ layout: compress
     </div>
   </div>
 </div>
-<script src='{{ root }}/assets/js/nprogress.js'></script>
-<script src="{{ root }}/assets/js/vivus.min.js"></script>
-<script src="{{ root }}/assets/js/layout.js" charset="utf-8"></script>
+<script src='http://www.remosco.net/assets/js/nprogress.js'></script>
+<script src="http://www.remosco.net/assets/js/vivus.min.js"></script>
+<script src="http://www.remosco.net/assets/js/layout.js" charset="utf-8"></script>
 {% if page.pill == 4 and page.subpill == 1 %}
-<script src='{{ root }}/assets/js/hash.js'></script>
+<script src='http://www.remosco.net/assets/js/hash.js'></script>
 {% endif %}
 {% if page.pill == 2 %}
-<script src='{{ root }}/assets/js/hash.js'></script>
+<script src='http://www.remosco.net/assets/js/hash.js'></script>
 {% endif %}
 {% if page.pill == 0 %}
-<script src="{{ root }}/assets/js/slider.min.js"></script>
-<script src="{{ root }}/assets/js/home.js" charset="utf-8"></script>
+<script src="http://www.remosco.net/assets/js/slider.min.js"></script>
+<script src="http://www.remosco.net/assets/js/home.js" charset="utf-8"></script>
 {% endif %}
 {% if page.pill == 4 %}
-<script src="{{ root }}/assets/js/easp.js"></script>
+<script src="http://www.remosco.net/assets/js/easp.js"></script>
 {% endif %}
 </body>
 

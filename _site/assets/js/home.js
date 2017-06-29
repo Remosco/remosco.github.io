@@ -1,5 +1,4 @@
 $(function() {
-  console.log("repositionning the bar");
   $('#nprogress .bar').css ("visibility", "hidden");
 
   $('#nprogress .bar')
@@ -24,10 +23,7 @@ $( document ).ready(function() {
 
   // load splash only if coming from outside or refreshing home
   if (document.referrer&&document.referrer.startsWith(window.location.href)&&document.referrer!=window.location.href) {
-    console.log("coming from this site, no animation");
     var myReferer = document.referrer;
-    console.log("referer : " + myReferer);
-    console.log("location : " + window.location.href);
     $('.logo-container')
     .transition({
       animation  : 'scale in',
@@ -52,7 +48,6 @@ $( document ).ready(function() {
           animTimingFunction: Vivus.EASE_OUT,
           duration: 180,
           onReady: function () {
-            console.log("actually starting");
             // Now I'm ready :) Let's play!
             $("#logo").css ("visibility","visible")
             this.play(function(){

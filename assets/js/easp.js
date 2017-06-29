@@ -4,10 +4,10 @@ $( document ).ready(function() {
     fullTextSearch:"exact",
      action: 'hide',
      onShow: function () {
-    $(".content").addClass("dimmable dimmed")
+    $(".pusher").addClass("dimmable dimmed")
      },
      onHide: function () {
-     $(".content").removeClass("dimmable dimmed")
+     $(".pusher").removeClass("dimmable dimmed")
      }
   })
   ;
